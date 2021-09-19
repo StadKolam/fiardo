@@ -36,14 +36,14 @@
             "AmplifyAppId": "d1ssb1k5ykflcy"
         },
         "categories": {
+            "auth": {
+                "fiardoa32e811d": {}
+            },
             "hosting": {
                 "amplifyhosting": {
                     "appId": "d1ssb1k5ykflcy",
-                    "type": "manual"
+                    "type": "cicd"
                 }
-            },
-            "auth": {
-                "fiardoa32e811d": {}
             }
         }
     },
@@ -63,12 +63,7 @@
             "auth": {
                 "fiardoa32e811d": {}
             },
-            "hosting": {
-                "amplifyhosting": {
-                    "appId": "d1ssb1k5ykflcy",
-                    "type": "manual"
-                }
-            }
+            "hosting": {}
         }
     }
 }
