@@ -65,5 +65,29 @@
             },
             "hosting": {}
         }
+    },
+    "design": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-fiardo-design-174211-authRole",
+            "UnauthRoleArn": "arn:aws:iam::660693725023:role/amplify-fiardo-design-174211-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::660693725023:role/amplify-fiardo-design-174211-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-fiardo-design-174211-deployment",
+            "UnauthRoleName": "amplify-fiardo-design-174211-unauthRole",
+            "StackName": "amplify-fiardo-design-174211",
+            "StackId": "arn:aws:cloudformation:us-east-2:660693725023:stack/amplify-fiardo-design-174211/290ceaf0-1960-11ec-af20-02285e82d03c",
+            "AmplifyAppId": "d1ssb1k5ykflcy"
+        },
+        "categories": {
+            "auth": {
+                "fiardoa32e811d": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1ssb1k5ykflcy",
+                    "type": "cicd"
+                }
+            }
+        }
     }
 }
