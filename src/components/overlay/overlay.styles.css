@@ -1,0 +1,101 @@
+#footer {
+    text-align: center;
+    color: white;
+    position: fixed;
+    padding: 10px 10px;
+    bottom: 0;
+    width: 100%;
+    font-size: small;
+    height: 30px;
+    background: black;
+  }
+  .fullscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+  }
+  
+  .bg {
+    background: #101010;
+  }
+  
+  .fullscreen.notready {
+    color: white;
+  }
+  
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: white;
+    padding: 40px;
+    pointer-events: none;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+    font-size: 10px;
+    line-height: 1.5em;
+  }
+  
+  .menu.left {
+    justify-content: flex-start;
+  }
+  
+  .menu.right {
+    justify-content: flex-end;
+  }
+  
+  .menu > div {
+    word-wrap: none;
+    word-break: none;
+    white-space: pre;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  
+  .menu > div b {
+    font-weight: 600;
+    color: white;
+  }
+  
+  .fullscreen.ready > div {
+    cursor: pointer;
+    color: white;
+    height: 50px;
+    width: 100px;
+    border: 3px solid white;
+    border-radius: 10px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+  }
+  
+  .fullscreen.clicked {
+    pointer-events: none;
+    opacity: 0;
+  }
+  
+  .menu a {
+    pointer-events: all;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+  }
+  .menu a:hover {
+    text-decoration: underline;
+    color: white;
+  }
+  

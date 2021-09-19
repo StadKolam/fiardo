@@ -1,0 +1,36 @@
+.instructions {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    padding: 15px;
+    border-style: solid ;
+    border-radius: 5px;
+    border-color: black;
+    background-color: black;
+    justify-content: center;
+
+    &.hidden {
+        display: none;
+    }
+    &.right {
+        left:auto;
+        right:50px;
+      }
+}
+
+pre {
+    font-family: 'Bungee', cursive;
+    color:white;
+    font-size: 14px;
+}
+
+.close-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color:white;
+    &:hover {
+        color: red;
+      }
+}
+

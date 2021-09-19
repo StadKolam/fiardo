@@ -1,0 +1,74 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-fiardo-dev-201558-authRole",
+            "UnauthRoleArn": "arn:aws:iam::660693725023:role/amplify-fiardo-dev-201558-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::660693725023:role/amplify-fiardo-dev-201558-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-fiardo-dev-201558-deployment",
+            "UnauthRoleName": "amplify-fiardo-dev-201558-unauthRole",
+            "StackName": "amplify-fiardo-dev-201558",
+            "StackId": "arn:aws:cloudformation:us-east-2:660693725023:stack/amplify-fiardo-dev-201558/40b7c4f0-c6f3-11eb-bee8-063f5df62d4a",
+            "AmplifyAppId": "d1ssb1k5ykflcy"
+        },
+        "categories": {
+            "auth": {
+                "fiardo60c0b12b": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1ssb1k5ykflcy",
+                    "type": "manual"
+                }
+            }
+        }
+    },
+    "production": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-fiardo-production-110405-authRole",
+            "UnauthRoleArn": "arn:aws:iam::660693725023:role/amplify-fiardo-production-110405-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::660693725023:role/amplify-fiardo-production-110405-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-fiardo-production-110405-deployment",
+            "UnauthRoleName": "amplify-fiardo-production-110405-unauthRole",
+            "StackName": "amplify-fiardo-production-110405",
+            "StackId": "arn:aws:cloudformation:us-east-2:660693725023:stack/amplify-fiardo-production-110405/8c24f020-1928-11ec-94f1-0273558bf63e",
+            "AmplifyAppId": "d1ssb1k5ykflcy"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1ssb1k5ykflcy",
+                    "type": "manual"
+                }
+            },
+            "auth": {
+                "fiardoa32e811d": {}
+            }
+        }
+    },
+    "staging": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-fiardo-staging-151243-authRole",
+            "UnauthRoleArn": "arn:aws:iam::660693725023:role/amplify-fiardo-staging-151243-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::660693725023:role/amplify-fiardo-staging-151243-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-fiardo-staging-151243-deployment",
+            "UnauthRoleName": "amplify-fiardo-staging-151243-unauthRole",
+            "StackName": "amplify-fiardo-staging-151243",
+            "StackId": "arn:aws:cloudformation:us-east-2:660693725023:stack/amplify-fiardo-staging-151243/481fadc0-194b-11ec-a5dd-023daeff6498",
+            "AmplifyAppId": "d1ssb1k5ykflcy"
+        },
+        "categories": {
+            "auth": {
+                "fiardoa32e811d": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1ssb1k5ykflcy",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}

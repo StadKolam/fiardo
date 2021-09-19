@@ -1,0 +1,12 @@
+.column {
+  height: 35px;
+  width: 17px;
+  margin-top: 3px;
+  background: black;
+  cursor: pointer;
+  opacity: 1;
+  box-shadow: 2px 2px 2px #242424;
+    &.playing{
+        background: hotpink;
+    }
+}

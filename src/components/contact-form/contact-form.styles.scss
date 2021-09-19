@@ -1,0 +1,19 @@
+.contact-form {
+    box-sizing:border-box;
+    background-size:cover;
+
+}
+
+.contact-icons {
+
+    margin-top:40px;
+    transform: translateX(50%);
+    width: 50%;
+    display: flex; 
+    justify-content: space-between;
+}
+
+.contact-logo:hover {
+    color:white;
+    cursor: pointer;
+}

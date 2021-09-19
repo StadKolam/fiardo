@@ -1,0 +1,74 @@
+.about-page {
+ 
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.about-page-grid {
+  width: 850px;
+  align-content: center;
+  display: grid; 
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  height:140%;
+  top:50%;
+  border-radius:.25em;
+  padding:4vmin;
+  justify-content: space-between;
+  text-align: center;
+  margin: auto;
+  width: 60%;
+}
+#contact-me {
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-row-end: 3;
+  grid-column-end: 3;
+  background-color:rgba(255,255,255,.2);
+  border-radius:15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-sizing:border-box;
+  width:50%;
+  height:30%;
+  transform: translateX(50%);
+}
+#about-author {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-column-end: 2;
+  background-color:rgba(255,255,255,.5);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  
+}
+#about-site {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-end: 2;
+  grid-column-end: 3; 
+  background-color:rgba(255,255,255,.5);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  
+  
+}
+}

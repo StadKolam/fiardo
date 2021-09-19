@@ -1,0 +1,44 @@
+{
+    "staging": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-fiardo-staging-103145-authRole",
+            "UnauthRoleArn": "arn:aws:iam::660693725023:role/amplify-fiardo-staging-103145-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::660693725023:role/amplify-fiardo-staging-103145-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-fiardo-staging-103145-deployment",
+            "UnauthRoleName": "amplify-fiardo-staging-103145-unauthRole",
+            "StackName": "amplify-fiardo-staging-103145",
+            "StackId": "arn:aws:cloudformation:us-east-2:660693725023:stack/amplify-fiardo-staging-103145/07f5a960-1924-11ec-9e55-0a401cfca22e",
+            "AmplifyAppId": "d1ssb1k5ykflcy"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1ssb1k5ykflcy",
+                    "type": "manual"
+                }
+            }
+        }
+    },
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-fiardo-dev-105249-authRole",
+            "UnauthRoleArn": "arn:aws:iam::660693725023:role/amplify-fiardo-dev-105249-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::660693725023:role/amplify-fiardo-dev-105249-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-fiardo-dev-105249-deployment",
+            "UnauthRoleName": "amplify-fiardo-dev-105249-unauthRole",
+            "StackName": "amplify-fiardo-dev-105249",
+            "StackId": "arn:aws:cloudformation:us-east-2:660693725023:stack/amplify-fiardo-dev-105249/f92adbf0-1926-11ec-a7dd-02d890c7688a",
+            "AmplifyAppId": "d1ssb1k5ykflcy"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1ssb1k5ykflcy",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}
