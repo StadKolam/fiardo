@@ -63,7 +63,12 @@
             "auth": {
                 "fiardoa32e811d": {}
             },
-            "hosting": {}
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1ssb1k5ykflcy",
+                    "type": "cicd"
+                }
+            }
         }
     },
     "design": {
