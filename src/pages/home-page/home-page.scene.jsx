@@ -13,6 +13,7 @@ import MovingBar from '../../components/3D-components/movie/moving-bar';
 import Loader from '../../components/3D-components/loader/loader.component';
 import Barrier from '../../components/3D-components/barrier/barrier.component';
 
+
 export default function HomePageScene() {
 
     const { user, videoFileName } = useHomeStore();
