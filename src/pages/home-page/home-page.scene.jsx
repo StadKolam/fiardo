@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react';
-import { OrbitControls } from '@react-three/drei';
 import { Physics } from '@react-three/cannon';
 import PhyPlane from '../../components/3D-components/phy-plane/phy-plane.component';
 import Vehicle from '../../components/3D-components/vehicle/vehicle';
@@ -91,8 +90,6 @@ export default function HomePageScene() {
             <Suspense fallback={<Loader />}>
                 <MovieWithoutScreen />
             </Suspense>
-            <OrbitControls />
-
         </>
     );
 }
