@@ -91,6 +91,7 @@ export default function HomePageScene() {
             <Suspense fallback={<Loader />}>
                 <MovieWithoutScreen />
             </Suspense>
+
         </>
     );
 }

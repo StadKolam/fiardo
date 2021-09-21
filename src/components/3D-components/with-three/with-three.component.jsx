@@ -1,13 +1,8 @@
 import React from 'react';
-import { Canvas, useThree } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import { Plane } from '@react-three/drei'
 import Instructions from '../../instructions/instructions.component';
 import threeAttrs from './threeAttrs';
-import Camera from '../camera/camera.component';
-import * as THREE from 'three'
-import { Joystick } from 'react-joystick-component';
-import { Responsive } from '../../responsive/responsive.component';
-import './joystick.styles.scss'
 
 const WithThree = (BaseComponent) => ({ instructionText, pageType = "coming-soon-page", ...props }) => {
     const attrs = threeAttrs[pageType]
@@ -66,12 +61,7 @@ const WithThree = (BaseComponent) => ({ instructionText, pageType = "coming-soon
                 <BaseComponent />
             </Canvas>
             {instructionText ? <Instructions instText={instructionText} /> : null}
-            <Responsive displayIn={["Mobile", "Tablet"]}>
-                <div className='joystick'>
 
-                    <Joystick />
-                </div>
-            </Responsive>
         </>
     )
 }

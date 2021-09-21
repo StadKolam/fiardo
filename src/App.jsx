@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React, { useEffect, Fragment } from 'react';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
 
 import RecordPage from './pages/record-page/record-page.component';
@@ -9,8 +9,9 @@ import useHomeStore from './zustand/home-page-store';
 import AboutPage from './pages/about-page/about-page.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up-page_copy/sign-in-and-sign-up-component';
 import HomeIcon from './components/home-icon/home-icon.component';
+import JoyStickComponent from './components/3D-components/joystick/joystick.component';
 
-const App = () => {
+const App = ({ location }) => {
   const { user, setUser } = useHomeStore();
   useEffect(() => {
     async function fetchUser() {
@@ -34,25 +35,21 @@ const App = () => {
       <Switch>
 
         <Route exact path='/' render={() => <HomePage instructionText={'home-page'} pageType={'home-page'} />} />
-
         <HomeIcon>
-          {/* <ProtectedRoute user={user} exact path='/record' render={() => <RecordPage />} /> */}
           <Route exact path='/record' render={() => <RecordPage instructionText={'record-page'} pageType={'record-page'} />} />
-
           <Route exact path="/sign-in-sign-up" component={SignInAndSignUpPage} />
           <Route exact path='/about-page' render={() => <AboutPage />} />
-          {/* instructions['AboutPage'] file */}
-          {/* <Route exact path="/about-page" component={AboutPage} /> */}
           <Route exact path="/f-page" render={() => <ComingSoonPage instructionText={'majooom'} />} />
           <Route exact path="/i-page" component={ComingSoonPage} />
           <Route exact path="/o-page" component={ComingSoonPage} />
           <Route exact path="/d-page" component={ComingSoonPage} />
         </HomeIcon >
       </Switch>
+      {location.pathname == '/' && <JoyStickComponent />}
 
 
     </>
   );
 };
 
-export default App;
+export default withRouter(App);

@@ -1,6 +1,6 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 
 export default function MountainScene(props) {
   const group = useRef()
@@ -18,7 +18,9 @@ export default function MountainScene(props) {
 
   const { nodes, materials } = useGLTF('/mountain-scene_draco.glb')
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null}
+    // scale={viewport.aspect > 0.6 ? 1 : (viewport.aspect)}
+    >
       <mesh castShadow
         receiveShadow geometry={nodes.asphalt.geometry} material={nodes.asphalt.material}>
         <mesh castShadow
