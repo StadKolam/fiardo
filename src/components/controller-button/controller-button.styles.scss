@@ -1,0 +1,13 @@
+.controller-button{
+    display:flex;
+    align-content: center;
+ &.left {
+     transform: rotate(90deg);
+ }
+ &.right {
+    transform: rotate(-90deg);
+}
+&.down {
+    transform: rotate(180deg);
+}
+}

@@ -9,7 +9,7 @@ import useHomeStore from './zustand/home-page-store';
 import AboutPage from './pages/about-page/about-page.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up-page_copy/sign-in-and-sign-up-component';
 import HomeIcon from './components/home-icon/home-icon.component';
-import JoyStickComponent from './components/3D-components/joystick/joystick.component';
+import Controller from './components/controller/controller.component';
 
 const App = ({ location }) => {
   const { user, setUser } = useHomeStore();
@@ -34,7 +34,7 @@ const App = ({ location }) => {
     <>
       <Switch>
 
-        <Route exact path='/' render={() => <HomePage instructionText={'home-page'} pageType={'home-page'} />} />
+        <Route exact path='/' render={() => <HomePage pageType={'home-page'} />} />
         <HomeIcon>
           <Route exact path='/record' render={() => <RecordPage instructionText={'record-page'} pageType={'record-page'} />} />
           <Route exact path="/sign-in-sign-up" component={SignInAndSignUpPage} />
@@ -45,7 +45,7 @@ const App = ({ location }) => {
           <Route exact path="/d-page" component={ComingSoonPage} />
         </HomeIcon >
       </Switch>
-      {location.pathname == '/' && <JoyStickComponent />}
+      {location.pathname == '/' && <Controller />}
 
 
     </>

@@ -1,0 +1,18 @@
+.controller {
+    position: absolute;
+    width:100%;
+    bottom:10px;
+    display:flex;
+    justify-content: space-between;
+    
+}
+
+.controller-left{
+}
+.controller-center{
+
+}
+.controller-right {
+    display: flex;
+    align-items:center;
+}
