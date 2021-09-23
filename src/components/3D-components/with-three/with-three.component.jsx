@@ -6,6 +6,7 @@ import threeAttrs from './threeAttrs';
 
 const WithThree = (BaseComponent) => ({ instructionText, pageType = "coming-soon-page", ...props }) => {
     const attrs = threeAttrs[pageType]
+
     return (
         <>
             <Canvas
@@ -13,7 +14,7 @@ const WithThree = (BaseComponent) => ({ instructionText, pageType = "coming-soon
                 color={'black'}
                 orthographic
                 camera={{
-                    zoom: 55,
+                    zoom: 50,
                     position: [12, 11, 12],
                 }}
             >
@@ -60,6 +61,7 @@ const WithThree = (BaseComponent) => ({ instructionText, pageType = "coming-soon
                 <BaseComponent />
             </Canvas>
             {instructionText ? <Instructions instText={instructionText} /> : null}
+
         </>
     )
 }

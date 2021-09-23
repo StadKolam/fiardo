@@ -23,6 +23,7 @@ function Vehicle({
   const wheel2 = useRef();
   const wheel3 = useRef();
   const wheel4 = useRef();
+  //ide kell egy if whether mobile or desktop
   const controls = useControls();
 
   const wheelInfo = {
