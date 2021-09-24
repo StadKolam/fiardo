@@ -19,7 +19,7 @@ const ControllerButton = ({ direction, rectangle, ...otherProps }) => {
         <div
             className={`controller-button ${direction}`}
         >
-            <HiArrowCircleUp onMouseDown={onMouseDown} onMouseUp={onMouseUp} className={`${direction}`} size={50} color={buttonColor} style={{ transform: [{ rotateX: '180deg' }] }} />
+            <HiArrowCircleUp onPointerDown={onMouseDown} onPointerUp={onMouseUp} className={`${direction}`} size={50} color={buttonColor} style={{ transform: [{ rotateX: '180deg' }] }} />
         </div>)
 
 }
