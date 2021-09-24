@@ -17,6 +17,7 @@ const WithThree = (BaseComponent) => ({ instructionText, pageType = "coming-soon
                     zoom: 50,
                     position: [12, 11, 12],
                 }}
+                frameloop="demand"
             >
                 <rectAreaLight
                     width={10}

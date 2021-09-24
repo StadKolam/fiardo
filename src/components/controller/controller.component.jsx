@@ -1,28 +1,25 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { HiCubeTransparent } from 'react-icons/hi';
 import { Joystick } from 'react-joystick-component';
 import ControllerButton from '../controller-button/controller-button.component';
 import { Responsive } from '../responsive/responsive.component';
-
+import { useControls } from '../utils/useControls'
 import './controller.styles.scss'
 
 const Controller = (props) => {
 
-    const keys = useRef({
-        forward: false,
-        backward: false,
-        left: false,
-        right: false,
-        brake: false,
-        reset: false,
-        enter: false
-    });
+    const controls = useControls()
+
+    useEffect(() => {
+        console.log(controls)
+    })
 
     return (
         <>
             <Responsive displayIn={["Mobile", "Tablet"]}>
                 <div className='controller'>
                     <div className='controller-left'>
-                        <ControllerButton />
+                        <ControllerButton id={"forward"} directionRef={controls.current.forward} />
                         <ControllerButton direction="down" />
 
                     </div>

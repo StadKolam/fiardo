@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useRaycastVehicle } from '@react-three/cannon';
 import { useControls } from '../../utils/useControls';
+import { keys } from '../../controller/controller.component'
 import VehicleBody from './vehicle-body';
 import Wheel from './wheel';
 import useHomeStore from '../../../zustand/home-page-store';
