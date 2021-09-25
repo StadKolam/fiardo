@@ -19,12 +19,13 @@ const Controller = (props) => {
             <Responsive displayIn={["Mobile", "Tablet"]}>
                 <div className='controller'>
                     <div className='controller-left'>
-                        <ControllerButton id={"forward"} directionRef={controls.current.forward} />
+                        <ControllerButton />
                         <ControllerButton direction="down" />
 
                     </div>
                     <div className='controller-center'>
-
+                        <ControllerButton buttonText={"brake"} />
+                        <ControllerButton buttonText={"reset"} />
                     </div>
                     <div className='controller-right'>
                         <ControllerButton direction="right" />

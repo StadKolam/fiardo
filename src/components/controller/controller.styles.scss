@@ -10,7 +10,8 @@
 .controller-left{
 }
 .controller-center{
-
+    display: flex;
+    align-items:center;
 }
 .controller-right {
     display: flex;

@@ -16,16 +16,21 @@ export function useKeyPress(target, event) {
 export function useControllerKeyTouch(buttonId, target, event) {
   var buttons = document.getElementsByClassName("controller-button");
 
+
   useEffect(() => {
-    const downHandler = ({ key }) => event(true);
-    const upHandler = ({ key }) => event(false);
-    buttons[buttonId].addEventListener('touchstart', downHandler);
-    buttons[buttonId].addEventListener('touchend', upHandler);
-    return () => {
-      buttons[buttonId].removeEventListener('touchstart', downHandler);
-      buttons[buttonId].removeEventListener('touchend', upHandler);
-    };
+    if (buttons.length !== 0) {
+
+      const downHandler = ({ key }) => event(true);
+      const upHandler = ({ key }) => event(false);
+      buttons[buttonId].addEventListener('touchstart', downHandler);
+      buttons[buttonId].addEventListener('touchend', upHandler);
+      return () => {
+        buttons[buttonId].removeEventListener('touchstart', downHandler);
+        buttons[buttonId].removeEventListener('touchend', upHandler);
+      };
+    }
   }, [event, target]);
+
 }
 
 export function useControls() {
@@ -40,8 +45,10 @@ export function useControls() {
   });
   useControllerKeyTouch(0, [''], (pressed) => (keys.current.forward = pressed))
   useControllerKeyTouch(1, [''], (pressed) => (keys.current.backward = pressed))
-  useControllerKeyTouch(2, [''], (pressed) => (keys.current.right = pressed))
-  useControllerKeyTouch(3, [''], (pressed) => (keys.current.left = pressed))
+  useControllerKeyTouch(2, [''], (pressed) => (keys.current.brake = pressed))
+  useControllerKeyTouch(3, [''], (pressed) => (keys.current.reset = pressed))
+  useControllerKeyTouch(4, [''], (pressed) => (keys.current.right = pressed))
+  useControllerKeyTouch(5, [''], (pressed) => (keys.current.left = pressed))
 
   useKeyPress(['ArrowUp', 'w'], (pressed) => (keys.current.forward = pressed));
   useKeyPress(

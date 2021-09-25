@@ -45,7 +45,8 @@ export default function HomePageScene() {
                     args={[30, 0.5, 30]}
                 />
 
-                {/* {user ? (
+
+                {user ? (
                     <SignFunctions
                         fileName={'/buttons/sign-out-bungee.glb'}
                         signOut={true}
@@ -55,9 +56,11 @@ export default function HomePageScene() {
                         fileName={'/buttons/sign-in-bungee.glb'}
                         linkUrl={'/sign-in-sign-up'}
                     />
-                )} */}
+                )}
 
-                {/* <Screen url={videoFileName} />
+
+                <Screen url={videoFileName} />
+                {/* 
                 <HighLightedLetters />
                 <MovingBar position={[3, 0.5, 4.1]} />
 
