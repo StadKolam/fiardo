@@ -48,18 +48,18 @@ export default function HomePageScene() {
 
                 {user ? (
                     <SignFunctions
-                        fileName={'/buttons/sign-out-bungee.glb'}
+                        fileName={'/buttons/sign-out-bungee_draco.glb'}
                         signOut={true}
                     />
                 ) : (
                     <SignFunctions
-                        fileName={'/buttons/sign-in-bungee.glb'}
+                        fileName={'/buttons/sign-in-bungee_draco.glb'}
                         linkUrl={'/sign-in-sign-up'}
                     />
                 )}
 
 
-                <Screen url={videoFileName} />
+                {/* <Screen url={videoFileName} /> */}
                 {/* 
                 <HighLightedLetters />
                 <MovingBar position={[3, 0.5, 4.1]} />
