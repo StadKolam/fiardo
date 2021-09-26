@@ -12,7 +12,6 @@ import MovingSpot from '../../components/3D-components/moving-spot/moving-spot.c
 import MovingBar from '../../components/3D-components/movie/moving-bar';
 import Loader from '../../components/3D-components/loader/loader.component';
 import Barrier from '../../components/3D-components/barrier/barrier.component';
-import { OrbitControls } from '@react-three/drei';
 
 
 export default function HomePageScene() {
@@ -95,7 +94,6 @@ export default function HomePageScene() {
             <Suspense fallback={<Loader />}>
                 <MovieWithoutScreen />
             </Suspense>
-            <OrbitControls />
 
         </>
     );

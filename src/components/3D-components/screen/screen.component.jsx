@@ -15,6 +15,8 @@ export default function Screen({ clicked, url, videoUpdate, ...props }) {
     vid.crossOrigin = 'Anonymous';
     vid.loop = true;
     vid.muted = true;
+    vid.autoplay = true;
+    vid.preload = "auto"
 
     return vid;
   });
