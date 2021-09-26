@@ -24,8 +24,9 @@ export default function HighLightedLetter({ fileName, linkUrl, ...props }) {
     mass: 1,
     type: 'Static',
     collisionResponse: 0,
-    args: [0.8, 0.2, 1],
+    args: [0.8, 1, 0.2],
     onCollide: onCollide,
+    rotation: [-Math.PI / 2, 0, 0],
     ...props,
   }));
 
@@ -49,25 +50,15 @@ export default function HighLightedLetter({ fileName, linkUrl, ...props }) {
   }
 
   return (
-    <group rotation={[-Math.PI / 2, 0, 0]}
+    <Text
       {...props}
-    >
-
-
-      <Text
-        ref={ref}
-
-        onPointerOver={onPointerOver}
-        onPointerOut={(e) => (setHovered(null))}
-        onClick={handleClick}
-        font="/Bungee-Regular.ttf" fontSize={1.5} letterSpacing={-0.06} >
-        {fileName}
-
-        <meshStandardMaterial color={'#03e3fc'} transparent opacity={0.5} />
-      </Text>
-
-    </group>
-
-
+      ref={ref}
+      onPointerOver={onPointerOver}
+      onPointerOut={(e) => (setHovered(null))}
+      onClick={handleClick}
+      font="/Bungee-Regular.ttf" fontSize={1.2} letterSpacing={-0.06} >
+      {fileName}
+      <meshStandardMaterial color={'#6bf0ff'} transparent opacity={0.6} />
+    </Text>
   );
 }

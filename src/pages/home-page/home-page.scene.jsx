@@ -12,6 +12,7 @@ import MovingSpot from '../../components/3D-components/moving-spot/moving-spot.c
 import MovingBar from '../../components/3D-components/movie/moving-bar';
 import Loader from '../../components/3D-components/loader/loader.component';
 import Barrier from '../../components/3D-components/barrier/barrier.component';
+import { OrbitControls } from '@react-three/drei';
 
 
 export default function HomePageScene() {
@@ -24,14 +25,14 @@ export default function HomePageScene() {
         <>
 
 
-            {/* <MovingSpot position={[0, 30, 0]} /> */}
+            <MovingSpot position={[0, 30, 0]} />
 
             <Physics
                 broadphase="SAP"
                 contactEquationRelaxation={4}
                 friction={1e-3}
                 allowSleep
-            //debug={{ color: 'black', scale: 1 }}
+            // debug={{ color: 'black', scale: 1 }}
             >
                 <PhyPlane
                     position={[0, -0.25, 0]}
@@ -48,18 +49,18 @@ export default function HomePageScene() {
 
                 {user ? (
                     <SignFunctions
-                        fileName={'SIGN OUT'}
+                        fileName={'SIGN\n   OUT'}
                         signOut={true}
                     />
                 ) : (
                     <SignFunctions
-                        fileName={'SIGN IN'}
+                        fileName={'SIGN\n    IN'}
                         linkUrl={'/sign-in-sign-up'}
                     />
                 )}
 
 
-                {/* <Screen url={videoFileName} /> */}
+                <Screen url={videoFileName} />
 
                 <HighLightedLetters />
                 <MovingBar position={[3, 0.5, 4.1]} />
@@ -94,6 +95,7 @@ export default function HomePageScene() {
             <Suspense fallback={<Loader />}>
                 <MovieWithoutScreen />
             </Suspense>
+            <OrbitControls />
 
         </>
     );

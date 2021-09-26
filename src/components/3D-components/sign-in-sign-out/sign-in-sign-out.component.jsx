@@ -20,9 +20,9 @@ export default function SignFunctions(props) {
   const [group] = useBox(() => ({
     mass: 1,
     ...props,
-    position: [6, 20, 6],
-    rotation: [0, Math.PI / 3, Math.PI / 6],
-    args: [2, 0.25, 1.5],
+    position: [8, 20, 7],
+    rotation: [-Math.PI / 2, Math.PI / 2, Math.PI / 2],
+    args: [2.2, 1.8, 0.2],
   }));
 
   const handleClick = () => {
@@ -50,15 +50,14 @@ export default function SignFunctions(props) {
     <Text
       ref={group}
       {...props}
-      dispose={null}
       onPointerOver={onPointerOver}
       onPointerOut={(e) => (setHovered(null))}
       onClick={props.signOut ? signOut : handleClick}
-      font="/Bungee-Regular.ttf" fontSize={1.5} letterSpacing={-0.06}
+      font="/Bungee-Regular.ttf" fontSize={1} letterSpacing={-0.06}
 
     >
       {fileName}
-      <meshStandardMaterial color={'C5913A'} />
+      <meshStandardMaterial color={'#C5913A'} />
     </Text>
   );
 }
