@@ -1,5 +1,6 @@
 $sub-color: black;
 $main-color: black;
+$breakpoint-tablet: 768px;
 
 @mixin shrinkLabel {
   top: -14px;
@@ -53,4 +54,12 @@ $main-color: black;
       @include shrinkLabel();
     }
   }
+  @media (max-width: $breakpoint-tablet) {
+    .form-input{
+      font-size:10px;
+    }
+    .form-input-label {
+      font-size: 10px;
+    }
+}
 }

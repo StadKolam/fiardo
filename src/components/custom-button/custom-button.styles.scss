@@ -1,3 +1,5 @@
+$breakpoint-tablet: 768px;
+
 .custom-button {
   min-width: 165px;
   width: auto;
@@ -17,10 +19,11 @@
   display: flex;
   justify-content: center;
   border-radius: 10px;
-
+  
   &:hover {
     background-color:#23a6d5;
     color: black;
+    
   }
 
 
@@ -34,5 +37,15 @@
       color: white;
       border: none;
     }
+  }
+  
+}
+@media (max-width: $breakpoint-tablet) {
+  .custom-button {
+    font-size: 10px;
+    min-width: 15px;
+    height:30px;
+    padding: 0 15px 0 15px;
+    line-height: 30px;
   }
 }

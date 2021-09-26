@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useGLTF } from '@react-three/drei';
+import { useGLTF, Text } from '@react-three/drei';
 import { useBox } from '@react-three/cannon';
 import useHomeStore from '../../../zustand/home-page-store';
 import { Auth } from 'aws-amplify';
@@ -12,7 +12,6 @@ export default function SignFunctions(props) {
 
   const [hovered, setHovered] = useState();
   const { user, reqSignIn, setUser, noReqSignIn } = useHomeStore();
-  const { nodes, materials } = useGLTF(fileName);
 
   useEffect(() => {
     document.body.style.cursor = hovered ? 'pointer' : 'auto';
@@ -48,20 +47,18 @@ export default function SignFunctions(props) {
     setHovered(true)
   }
   return (
-    <group
+    <Text
       ref={group}
       {...props}
       dispose={null}
       onPointerOver={onPointerOver}
       onPointerOut={(e) => (setHovered(null))}
       onClick={props.signOut ? signOut : handleClick}
+      font="/Bungee-Regular.ttf" fontSize={1.5} letterSpacing={-0.06}
+
     >
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Text.geometry}
-        material={materials['text-body']}
-      />
-    </group>
+      {fileName}
+      <meshStandardMaterial color={'C5913A'} />
+    </Text>
   );
 }

@@ -9,28 +9,30 @@ import AboutAuthorInfo from '../../components/about-author-info/about-author-inf
 const AboutPage = () => {
     return (
         <div className='about-page'>
-            <div className="about-page-grid">
+            <div className="about-page-boxes">
 
-                {/* <AboutMenuItem id="about-site" title="about site" imageUrl="homepage-pic.png" /> */}
-                {/* <AboutPageInfo /> */}
+                <div className="wrapper">
+
+                    <div className="box1">
+
+                        {/* <AboutMenuItem id="about-site" title="about site" imageUrl="homepage-pic.png" /> */}
+                        {/* <AboutPageInfo /> */}
 
 
-                {/* <AboutMenuItem id="about-author" key='1' title="about author" imageUrl="coming-soon.png" /> */}
-                {/* <AboutMenuItem title="about site" imageUrl="homepage-pic.png" /> */}
+                        {/* <AboutMenuItem id="about-author" key='1' title="about author" imageUrl="coming-soon.png" /> */}
+                        {/* <AboutMenuItem title="about site" imageUrl="homepage-pic.png" /> */}
+                        <AboutPageInfo />
+                    </div>
+                    <div className="box2">
+                        <AboutAuthorInfo />
+                    </div>
+                </div>
+                <div className="box3">
 
 
-                <FlipCard id="about-site" title="About Site">
-                    <AboutMenuItem key='0' title="about site" imageUrl="homepage-pic.png" />
-                    <AboutPageInfo />
-
-                </FlipCard>
-
-                <FlipCard id="about-author" title="About Author">
-                    <AboutMenuItem key='1' title="about author" imageUrl="coming-soon.png" />
-                    <AboutAuthorInfo />
-                </FlipCard>
-                <div id='contact-me'>
                     <ContactForm />
+
+
                 </div>
 
             </div>

@@ -23,11 +23,17 @@ canvas {
 }
 
 body {
-  position: fixed;
-  overflow: hidden;
-  overscroll-behavior-y: none;
   font-family: 'Bungee', cursive;
   color: black;
+  background-attachment: fixed;
+  background-size: auto;
+}
+#footer {
+  display:flex;
+  justify-content: center;
+  font-family: 'Bungee', cursive;
+  color: white;
+  background-color: black;
   background-attachment: fixed;
   background-size: auto;
 }

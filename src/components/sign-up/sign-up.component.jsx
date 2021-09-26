@@ -53,7 +53,7 @@ const SignUp = () => {
   return (
     <div className="sign-up">
       <h2 className="title">I do not have an account</h2>
-      <span>Sign up with your email and password</span>
+      <span className="under-title">Sign up with your email and password</span>
       {
         inProgress ?
           <Spinner /> :

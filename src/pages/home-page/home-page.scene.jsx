@@ -48,19 +48,19 @@ export default function HomePageScene() {
 
                 {user ? (
                     <SignFunctions
-                        fileName={'/buttons/sign-out-bungee_draco.glb'}
+                        fileName={'SIGN OUT'}
                         signOut={true}
                     />
                 ) : (
                     <SignFunctions
-                        fileName={'/buttons/sign-in-bungee_draco.glb'}
+                        fileName={'SIGN IN'}
                         linkUrl={'/sign-in-sign-up'}
                     />
                 )}
 
 
                 {/* <Screen url={videoFileName} /> */}
-                {/* 
+
                 <HighLightedLetters />
                 <MovingBar position={[3, 0.5, 4.1]} />
 
@@ -74,13 +74,13 @@ export default function HomePageScene() {
                     rotation={[0, Math.PI / 2, 0]}
                     position={[-4.5, 0.8, -0.8]}
                     args={[8, 1, 1]}
-                /> */}
+                />
                 <Vehicle
                     position={[4.5, 0.5, 2]}
                     angularVelocity={[0, 0.5, 0]}
                     wheelRadius={0.3}
                 />
-                {/* <FixVehicle
+                <FixVehicle
                     scale={[0.3, 0.3, 0.3]}
                     position={[-2.6, 0.5, -1.6]}
                     fileName={'vehicle-fix_draco.glb'}
@@ -89,7 +89,7 @@ export default function HomePageScene() {
                     scale={[0.3, 0.3, 0.3]}
                     position={[0, 0.5, -0.1]}
                     fileName={'vehicle-fix-kombi_draco.glb'}
-                /> */}
+                />
             </Physics>
             <Suspense fallback={<Loader />}>
                 <MovieWithoutScreen />

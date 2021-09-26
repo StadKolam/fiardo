@@ -1,9 +1,21 @@
+$breakpoint-tablet: 768px;
+
 .sign-up {
   width: 380px;
   display: flex;
   flex-direction: column;
-
   .title {
     margin: 10px 0;
   }
+}
+@media (max-width: $breakpoint-tablet) {
+  .sign-up {
+      width: 80%;
+  }
+  .title {
+    font-size: 12px;
+}
+.under-title{
+  font-size:10px;
+}
 }
