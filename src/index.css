@@ -14,12 +14,7 @@ body,
 canvas {
   display: block; /* fix necessary to remove space at bottom of canvas */
   color:blueviolet;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;  
+  
   
 }
 
