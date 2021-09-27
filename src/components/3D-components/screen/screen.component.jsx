@@ -17,7 +17,6 @@ export default function Screen({ clicked, url, videoUpdate, ...props }) {
     vid.muted = true;
     vid.autoplay = true;
     vid.preload = "auto"
-
     return vid;
   });
 

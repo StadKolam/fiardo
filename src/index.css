@@ -14,6 +14,7 @@ body,
 canvas {
   display: block; /* fix necessary to remove space at bottom of canvas */
   color:blueviolet;
+  -webkit-overflow-scrolling:none;
   
   
 }
