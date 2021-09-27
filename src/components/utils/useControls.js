@@ -33,6 +33,8 @@ export function useControllerKeyTouch(buttonId, target, event) {
 
 }
 
+
+
 export function useControls() {
   const keys = useRef({
     forward: false,
@@ -47,8 +49,8 @@ export function useControls() {
   useControllerKeyTouch(1, [''], (pressed) => (keys.current.backward = pressed))
   useControllerKeyTouch(2, [''], (pressed) => (keys.current.brake = pressed))
   useControllerKeyTouch(3, [''], (pressed) => (keys.current.reset = pressed))
-  useControllerKeyTouch(4, [''], (pressed) => (keys.current.right = pressed))
-  useControllerKeyTouch(5, [''], (pressed) => (keys.current.left = pressed))
+  // useControllerKeyTouch(4, [''], (pressed) => (keys.current.right = pressed))
+  // useControllerKeyTouch(5, [''], (pressed) => (keys.current.left = pressed))
 
   useKeyPress(['ArrowUp', 'w'], (pressed) => (keys.current.forward = pressed));
   useKeyPress(
