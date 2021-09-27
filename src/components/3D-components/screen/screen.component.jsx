@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 
-export default function Screen({ clicked, url, videoUpdate, ...props }) {
+export default function Screen({ url, videoUpdate, ...props }) {
   const group = useRef();
   const [movie, setMovie] = useState(true);
 
@@ -26,7 +26,7 @@ export default function Screen({ clicked, url, videoUpdate, ...props }) {
     video.play();
   }, [url, video]);
 
-  useEffect(() => void (clicked && video.play()), [video, clicked]);
+  useEffect(() => void (video.play()), [video]);
 
   return (
     <group
