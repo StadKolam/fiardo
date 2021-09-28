@@ -7,7 +7,9 @@ const HomePage = WithThree(() => {
 
     const { viewport } = useThree()
     useFrame((state) => {
-        state.camera.zoom = viewport.aspect > 0.6 ? 40 : 20
+        if (viewport.aspect) {
+            state.camera.zoom = viewport.aspect > 0.6 ? 50 : 20
+        }
         state.camera.updateProjectionMatrix()
     })
     return (<HomePageScene />)
