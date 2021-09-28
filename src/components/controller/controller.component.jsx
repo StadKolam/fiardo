@@ -23,13 +23,8 @@ const Controller = (props) => {
                         <ControllerButton />
                         <ControllerButton buttonText={"brake"} />
                         <ControllerButton direction="down" />
-
-                    </div>
-                    <div className='controller-center'>
-                        <ControllerButton buttonText={"reset"} />
                     </div>
                     <div className='controller-right'>
-
                         <ControllerButton direction="right" />
                         <ControllerButton direction="left" />
                     </div>

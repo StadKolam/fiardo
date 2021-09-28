@@ -26,11 +26,7 @@ const AboutPage = () => {
 
                 </div>
                 <div className="box3">
-
-
                     <ContactForm />
-
-
                 </div>
 
             </div>

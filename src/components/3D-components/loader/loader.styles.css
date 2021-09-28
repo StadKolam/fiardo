@@ -1,14 +1,6 @@
 .loader {
-  height: 100%;
-  width: 100%;
-  
-  /* Set the height to match that of the viewport. */
-  height: 100vh;
-
-  /* Set the width to match that of the viewport. */
-  width: 100vw;
-
-  /* Remove any browser-default margins. */
+  height: 200vh;
+  width: 200vw;
   margin: 0;
   background-color: black;
   color:white;
