@@ -3,7 +3,10 @@ import { Canvas } from '@react-three/fiber';
 import { Plane } from '@react-three/drei'
 import Instructions from '../../instructions/instructions.component';
 import threeAttrs from './threeAttrs';
+import { getWindowDimension } from '../../utils/responsiveUtil';
 
+
+const { width, height } = getWindowDimension();
 const WithThree = (BaseComponent) => ({ instructionText, pageType = "coming-soon-page", ...props }) => {
     const attrs = threeAttrs[pageType]
 
@@ -14,7 +17,7 @@ const WithThree = (BaseComponent) => ({ instructionText, pageType = "coming-soon
                 color={'black'}
                 orthographic
                 camera={{
-                    zoom: 50,
+                    zoom: width / height < 0.6 ? 20 : 40,
                     position: [12, 11, 12],
                 }}
                 frameloop="demand"
