@@ -17,7 +17,7 @@ const WithThree = (BaseComponent) => ({ instructionText, pageType = "coming-soon
                 color={'black'}
                 orthographic
                 camera={{
-                    zoom: width / height > 0.6 ? 40 : 20,
+                    zoom: 20,
                     position: [12, 11, 12],
                 }}
                 frameloop="demand"
