@@ -14,19 +14,20 @@ export function useKeyPress(target, event) {
 }
 
 export function useControllerKeyTouch(buttonId, target, event) {
-  var buttons = document.getElementsByClassName("controller-button");
+  // var buttons = document.getElementsByClassName("controller-button");
+  var button = document.getElementById(buttonId);
 
 
   useEffect(() => {
-    if (buttons.length !== 0) {
+    if (button) {
 
       const downHandler = ({ key }) => event(true);
       const upHandler = ({ key }) => event(false);
-      buttons[buttonId].addEventListener('touchstart', downHandler);
-      buttons[buttonId].addEventListener('touchend', upHandler);
+      button.addEventListener('touchstart', downHandler);
+      button.addEventListener('touchend', upHandler);
       return () => {
-        buttons[buttonId].removeEventListener('touchstart', downHandler);
-        buttons[buttonId].removeEventListener('touchend', upHandler);
+        button.removeEventListener('touchstart', downHandler);
+        button.removeEventListener('touchend', upHandler);
       };
     }
   }, [event, target]);
@@ -45,12 +46,11 @@ export function useControls() {
     reset: false,
     enter: false
   });
-  useControllerKeyTouch(0, [''], (pressed) => (keys.current.forward = pressed))
-  useControllerKeyTouch(1, [''], (pressed) => (keys.current.backward = pressed))
-  useControllerKeyTouch(2, [''], (pressed) => (keys.current.brake = pressed))
-  useControllerKeyTouch(3, [''], (pressed) => (keys.current.reset = pressed))
-  // useControllerKeyTouch(4, [''], (pressed) => (keys.current.right = pressed))
-  // useControllerKeyTouch(5, [''], (pressed) => (keys.current.left = pressed))
+  useControllerKeyTouch("forward-controller-button", [''], (pressed) => (keys.current.forward = pressed))
+  useControllerKeyTouch("break-controller-button", [''], (pressed) => (keys.current.break = pressed))
+  useControllerKeyTouch("down-controller-button", [''], (pressed) => (keys.current.backward = pressed))
+  useControllerKeyTouch("right-controller-button", [''], (pressed) => (keys.current.left = pressed))
+  useControllerKeyTouch("left-controller-button", [''], (pressed) => (keys.current.right = pressed))
 
   useKeyPress(['ArrowUp', 'w'], (pressed) => (keys.current.forward = pressed));
   useKeyPress(

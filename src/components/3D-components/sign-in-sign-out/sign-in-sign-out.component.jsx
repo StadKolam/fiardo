@@ -20,7 +20,7 @@ export default function SignFunctions(props) {
   const [group] = useBox(() => ({
     mass: 1,
     ...props,
-    position: [8, 20, 7],
+    position: [-8, 20, -4],
     rotation: [-Math.PI / 2, Math.PI / 2, Math.PI / 2],
     args: [2.2, 1.8, 0.2],
   }));

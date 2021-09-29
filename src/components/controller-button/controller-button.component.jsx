@@ -15,6 +15,7 @@ const ControllerButton = ({ id, direction, buttonText, directionRef, ...otherPro
     return (
 
         <div
+            id={id}
             className={`controller-button ${direction} ${buttonText}`}
         >
             {!buttonText ? (

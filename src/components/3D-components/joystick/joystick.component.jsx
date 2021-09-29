@@ -2,8 +2,6 @@ import React, { useEffect, useRef } from 'react';
 
 import { Joystick } from 'react-joystick-component';
 import { Responsive } from '../../responsive/responsive.component';
-import { useControls } from '../../utils/useControls';
-import { useJoystick } from '../../utils/useJoyStick';
 import './joystick.styles.scss'
 
 import useControlStore from '../../../zustand/control-store';
