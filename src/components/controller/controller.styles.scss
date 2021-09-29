@@ -1,4 +1,11 @@
-.controller {
+.controller-upper-part{
+    position:absolute;
+    left:5px;
+      top:5px;
+}
+
+
+.controller-low-part {
     position: absolute;
     width:100%;
     bottom:10px;

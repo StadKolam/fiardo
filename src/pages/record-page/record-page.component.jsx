@@ -6,7 +6,9 @@ const RecordPage = WithThree(() => {
 
     const { viewport } = useThree()
     useFrame((state) => {
-        state.camera.zoom = viewport.aspect > 0.6 ? 40 : 10
+        if (viewport.aspect) {
+            state.camera.zoom = viewport.aspect > 1 ? 45 : 40 * viewport.aspect
+        }
         state.camera.updateProjectionMatrix()
     })
     return (<RecordScene />)

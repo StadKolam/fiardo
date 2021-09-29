@@ -6,9 +6,11 @@ import './controller-button.styles.scss'
 const ControllerButton = ({ id, direction, buttonText, directionRef, ...otherProps }) => {
     const [buttonColor, setColor] = useState('white')
     const onMouseDown = (e) => {
+        e.stopPropagation()
         setColor('yellow')
     }
     const onMouseUp = (e) => {
+        e.stopPropagation()
         setColor('white')
     }
 

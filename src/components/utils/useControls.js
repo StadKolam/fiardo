@@ -47,10 +47,11 @@ export function useControls() {
     enter: false
   });
   useControllerKeyTouch("forward-controller-button", [''], (pressed) => (keys.current.forward = pressed))
-  useControllerKeyTouch("break-controller-button", [''], (pressed) => (keys.current.break = pressed))
+  useControllerKeyTouch("break-controller-button", [''], (pressed) => (keys.current.brake = pressed))
   useControllerKeyTouch("down-controller-button", [''], (pressed) => (keys.current.backward = pressed))
   useControllerKeyTouch("right-controller-button", [''], (pressed) => (keys.current.left = pressed))
   useControllerKeyTouch("left-controller-button", [''], (pressed) => (keys.current.right = pressed))
+  useControllerKeyTouch("reset-controller-button", [''], (pressed) => (keys.current.reset = pressed))
 
   useKeyPress(['ArrowUp', 'w'], (pressed) => (keys.current.forward = pressed));
   useKeyPress(

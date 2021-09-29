@@ -15,7 +15,11 @@ const Controller = (props) => {
     return (
         <>
             <Responsive displayIn={["Mobile", "Tablet"]}>
-                <div className='controller'>
+                <div className="controller-upper-part">
+                    <ControllerButton id="reset-controller-button" buttonText={"reset"} />
+
+                </div>
+                <div className='controller-low-part'>
                     <div className='controller-left'>
                         <ControllerButton id="forward-controller-button" />
                         <ControllerButton id="break-controller-button" buttonText={"brake"} />
