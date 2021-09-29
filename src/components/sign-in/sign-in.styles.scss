@@ -1,14 +1,27 @@
+$breakpoint-tablet: 768px;
+
 .sign-in {
   width: 380px;
   display: flex;
   flex-direction: column;
-
   .title {
     margin: 10px 0;
   }
-
+  
   .buttons {
     display: flex;
     justify-content: space-between;
   }
+  
+}
+@media (max-width: $breakpoint-tablet) {
+  .sign-in {
+      width: 80%;
+  }
+  .title {
+    font-size: 12px;
+}
+.under-title{
+  font-size:10px;
+}
 }

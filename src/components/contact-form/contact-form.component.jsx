@@ -20,12 +20,12 @@ export default function ContactForm() {
 
 
     return (<div className='contact-form'>
-        <h3>Contact Me</h3>
-        <div className='contact-icons'>
 
-            <FaLinkedin className='contact-logo' size={40} onClick={onLinkedinClick} />
-            <FaGithub className='contact-logo' size={40} onClick={onGitHubClick} />
-            <FaAt className='contact-logo' size={40} onClick={onAtClick} />
-        </div>
+
+
+        <FaLinkedin className='contact-logo' size={40} onClick={onLinkedinClick} />
+        <FaGithub className='contact-logo' size={40} onClick={onGitHubClick} />
+        <FaAt className='contact-logo' size={40} onClick={onAtClick} />
+
     </div>)
 }

@@ -1,53 +1,45 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import { Joystick } from 'react-joystick-component';
 import { Responsive } from '../../responsive/responsive.component';
-
 import './joystick.styles.scss'
+
+import useControlStore from '../../../zustand/control-store';
+
 const JoyStickComponent = (props) => {
+    const { setKeys } = useControlStore();
     const joystickEvent = (event) => {
+
+
+
+
+        if (event.direction == "LEFT") {
+            setKeys("right", false)
+            setKeys("left", true)
+            setKeys("forward", true)
+        } else if (event.direction == "RIGHT") {
+            setKeys("left", false)
+            setKeys("right", true)
+            setKeys("forward", true)
+        }
+
         console.log(event)
-        // const keys = useRef({
-        //     forward: false,
-        //     backward: false,
-        //     left: false,
-        //     right: false,
-        //     brake: false,
-        //     reset: false,
-        //     enter: false
-        // });
-        //         const direction = event.direction.toLowerCase();
-        //         // backward down
-        //         const newDirection =
-        //           direction === "forward"
-        //             ? "top"
-        //             : direction === "backward"
-        //             ? "down"
-        //             : direction;
-        //         return keys;
+
+    }
+    const onStop = (event) => {
+        setKeys("forward", false)
+        setKeys("brake", true)
+
+        console.log(event)
     }
 
-
-    // function useControls() {
-    //     const keys = useRef({
-    //         forward: false,
-    //         backward: false,
-    //         left: false,
-    //         right: false,
-    //         brake: false,
-    //         reset: false,
-    //         enter: false
-    //     });
-    //     useKeyPress(['ArrowUp', 'w'], (pressed) => (keys.current.forward = pressed));
-    //     return keys;
-    // }
     return (
         <>
 
 
             <Responsive displayIn={["Mobile", "Tablet"]}>
                 <div className='joystick'>
-                    <Joystick size={50} move={joystickEvent} />
+                    <Joystick size={50} move={joystickEvent} stop={onStop} />
                 </div>
             </Responsive>
         </>

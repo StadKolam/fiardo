@@ -9,25 +9,26 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;  
 }
 
 canvas {
   display: block; /* fix necessary to remove space at bottom of canvas */
-  color:blueviolet
+  color:blueviolet;
+  -webkit-overflow-scrolling:none;
 }
 
 body {
-  position: fixed;
-  overflow: hidden;
-  overscroll-behavior-y: none;
   font-family: 'Bungee', cursive;
   color: black;
+  background-attachment: fixed;
+  background-size: auto;
+}
+#footer {
+  display:flex;
+  justify-content: center;
+  font-family: 'Bungee', cursive;
+  color: white;
+  background-color: black;
   background-attachment: fixed;
   background-size: auto;
 }

@@ -4,13 +4,20 @@
     bottom:10px;
     display:flex;
     justify-content: space-between;
-    
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .controller-left{
+    
 }
 .controller-center{
-
+    display: flex;
+    align-items:center;
+    width:50%;
 }
 .controller-right {
     display: flex;

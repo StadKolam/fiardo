@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useBox } from '@react-three/cannon';
-import { useGLTF } from '@react-three/drei';
+import { useGLTF, Text } from '@react-three/drei';
 
 import useHomeStore from '../../../zustand/home-page-store';
 
 export default function HighLightedLetter({ fileName, linkUrl, ...props }) {
   const { videoData, signInReq } = { ...props };
   const { setVideo, setLink, user, reqSignIn } = useHomeStore();
-  const { nodes } = useGLTF(fileName);
   const [hovered, setHovered] = useState();
 
   useFrame(({ clock }) => {
@@ -25,14 +24,16 @@ export default function HighLightedLetter({ fileName, linkUrl, ...props }) {
     mass: 1,
     type: 'Static',
     collisionResponse: 0,
-    args: [0.8, 0.2, 1],
+    args: [0.8, 1, 0.2],
     onCollide: onCollide,
+    rotation: [-Math.PI / 2, 0, 0],
     ...props,
   }));
 
   const onCollide = (e) => {
     setVideo(videoData)
     setLink(linkUrl)
+    console.log("valami")
   };
 
   const handleClick = () => {
@@ -49,18 +50,15 @@ export default function HighLightedLetter({ fileName, linkUrl, ...props }) {
   }
 
   return (
-    <mesh
-      ref={ref}
+    <Text
       {...props}
-      scale={[0.3, 0.3, 0.3]}
-      castShadow
-      receiveShadow
-      geometry={nodes.Text.geometry}
+      ref={ref}
       onPointerOver={onPointerOver}
       onPointerOut={(e) => (setHovered(null))}
       onClick={handleClick}
-    >
-      <meshStandardMaterial color={'#03e3fc'} transparent opacity={0.5} />
-    </mesh>
+      font="/Bungee-Regular.ttf" fontSize={1.2} letterSpacing={-0.06} >
+      {fileName}
+      <meshStandardMaterial color={'#6bf0ff'} transparent opacity={0.6} />
+    </Text>
   );
 }

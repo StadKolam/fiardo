@@ -34,7 +34,7 @@ const SignIn = () => {
 
     <div className="sign-in">
       <h2 className="title">I already have an account</h2>
-      <span>Sign in with your email and password</span>
+      <span className="under-title">Sign in with your email and password</span>
       {
         inProgress ?
 

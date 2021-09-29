@@ -2,9 +2,12 @@ import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useRaycastVehicle } from '@react-three/cannon';
 import { useControls } from '../../utils/useControls';
+import { keys } from '../../controller/controller.component'
 import VehicleBody from './vehicle-body';
 import Wheel from './wheel';
 import useHomeStore from '../../../zustand/home-page-store';
+import useControlStore from '../../../zustand/control-store';
+
 function Vehicle({
   radius = 0.1,
   width = 0.4,
@@ -12,12 +15,12 @@ function Vehicle({
   front = 0.37,
   back = -0.35,
   steer = 0.75,
-  force = 1000,
+  force = 500,
   maxBrake = 1e5,
   ...props
 }) {
   const { link, user, reqSignIn } = useHomeStore();
-
+  // const { keys } = useControlStore()
   const chassis = useRef();
   const wheel1 = useRef();
   const wheel2 = useRef();
@@ -25,6 +28,7 @@ function Vehicle({
   const wheel4 = useRef();
   //ide kell egy if whether mobile or desktop
   const controls = useControls();
+  //const controls = useJoyStick();
 
   const wheelInfo = {
     radius,
@@ -74,6 +78,8 @@ function Vehicle({
 
   useFrame(() => {
     const { forward, backward, left, right, brake, reset, enter } = controls.current;
+    // const { forward, backward, left, right, brake, reset, enter } = keys;
+
     for (let e = 2; e < 4; e++)
       api.applyEngineForce(
         forward || backward ? force * (forward && !backward ? -1 : 1) : 0,

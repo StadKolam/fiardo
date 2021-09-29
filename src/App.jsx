@@ -1,15 +1,20 @@
-import React, { useEffect, Fragment } from 'react';
+import React, { Suspense, useEffect, lazy } from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
-
-import RecordPage from './pages/record-page/record-page.component';
-import ComingSoonPage from './pages/coming-soon-page/coming-soon-page.component';
-import HomePage from './pages/home-page/home-page.component';
-import useHomeStore from './zustand/home-page-store';
-import AboutPage from './pages/about-page/about-page.component';
-import SignInAndSignUpPage from './pages/sign-in-and-sign-up-page_copy/sign-in-and-sign-up-component';
 import HomeIcon from './components/home-icon/home-icon.component';
 import Controller from './components/controller/controller.component';
+import useHomeStore from './zustand/home-page-store';
+
+import HomePage from './pages/home-page/home-page.component';
+import Spinner from './components/spinner/spinner.component';
+// import RecordPage from './pages/record-page/record-page.component';
+const RecordPage = lazy(() => import('./pages/record-page/record-page.component'));
+// import ComingSoonPage from './pages/coming-soon-page/coming-soon-page.component';
+const ComingSoonPage = lazy(() => import('./pages/coming-soon-page/coming-soon-page.component'));
+
+// import SignInAndSignUpPage from './pages/sign-in-and-sign-up-page_copy/sign-in-and-sign-up-component';
+const SignInAndSignUpPage = lazy(() => import('./pages/sign-in-and-sign-up-page/sign-in-and-sign-up.component'));
+const AboutPage = lazy(() => import('./pages/about-page/about-page.component'));
 
 const App = ({ location }) => {
   const { user, setUser } = useHomeStore();
@@ -36,13 +41,15 @@ const App = ({ location }) => {
 
         <Route exact path='/' render={() => <HomePage pageType={'home-page'} />} />
         <HomeIcon>
-          <Route exact path='/record' render={() => <RecordPage instructionText={'record-page'} pageType={'record-page'} />} />
-          <Route exact path="/sign-in-sign-up" component={SignInAndSignUpPage} />
-          <Route exact path='/about-page' render={() => <AboutPage />} />
-          <Route exact path="/f-page" render={() => <ComingSoonPage instructionText={'majooom'} />} />
-          <Route exact path="/i-page" component={ComingSoonPage} />
-          <Route exact path="/o-page" component={ComingSoonPage} />
-          <Route exact path="/d-page" component={ComingSoonPage} />
+          <Suspense fallback={<Spinner />}>
+            <Route exact path='/record' render={() => <RecordPage instructionText={'record-page'} pageType={'record-page'} />} />
+            <Route exact path="/sign-in-sign-up" component={SignInAndSignUpPage} />
+            <Route exact path='/about-page' render={() => <AboutPage />} />
+            <Route exact path="/f-page" render={() => <ComingSoonPage instructionText={'majooom'} />} />
+            <Route exact path="/i-page" component={ComingSoonPage} />
+            <Route exact path="/o-page" component={ComingSoonPage} />
+            <Route exact path="/d-page" component={ComingSoonPage} />
+          </Suspense>
         </HomeIcon >
       </Switch>
       {location.pathname == '/' && <Controller />}

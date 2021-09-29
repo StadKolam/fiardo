@@ -3,23 +3,27 @@ import { HiArrowCircleUp } from 'react-icons/hi'
 import { FaRedo } from 'react-icons/fa'
 import './controller-button.styles.scss'
 
-const ControllerButton = ({ direction, rectangle, ...otherProps }) => {
+const ControllerButton = ({ id, direction, buttonText, directionRef, ...otherProps }) => {
     const [buttonColor, setColor] = useState('white')
-    const onMouseDown = () => {
-        console.log('I am being pushed')
+    const onMouseDown = (e) => {
         setColor('yellow')
     }
-    const onMouseUp = () => {
-
-        console.log('I was released')
+    const onMouseUp = (e) => {
         setColor('white')
     }
 
     return (
+
         <div
-            className={`controller-button ${direction}`}
+            id={id}
+            className={`controller-button ${direction} ${buttonText}`}
         >
-            <HiArrowCircleUp onMouseDown={onMouseDown} onMouseUp={onMouseUp} className={`${direction}`} size={50} color={buttonColor} style={{ transform: [{ rotateX: '180deg' }] }} />
+            {!buttonText ? (
+
+                <HiArrowCircleUp onTouchStart={onMouseDown} onTouchEnd={onMouseUp} className={`${direction}`} size={50} color={buttonColor} style={{ transform: [{ rotateX: '180deg' }] }} />
+            ) :
+                <div>{buttonText}</div>
+            }
         </div>)
 
 }

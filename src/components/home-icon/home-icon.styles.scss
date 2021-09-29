@@ -1,3 +1,6 @@
+$breakpoint-tablet: 768px;
+
+
 .home-icon {
     position: absolute;
     left: 50px;
@@ -6,4 +9,10 @@
     :hover{
         color:white;
     }
+}
+@media (max-width: $breakpoint-tablet) {
+  .home-icon {
+      left:5px;
+      top:5px;
+  }
 }
