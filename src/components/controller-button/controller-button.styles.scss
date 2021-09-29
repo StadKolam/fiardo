@@ -3,12 +3,19 @@
     justify-content: center;
     -webkit-touch-callout:none;
     -webkit-user-select:none;
-    -khtml-user-select:none;
     -moz-user-select:none;
     -ms-user-select:none;
     user-select:none;
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
- &.left {
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+    touch-action: none;
+    -ms-touch-action: none;
+    user-select: none;
+
+    &:hover{
+     color:red;
+ }
+ 
+    &.left {
     
      transform: rotate(90deg);
  }

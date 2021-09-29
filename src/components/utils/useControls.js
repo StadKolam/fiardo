@@ -17,10 +17,8 @@ export function useControllerKeyTouch(buttonId, target, event) {
   // var buttons = document.getElementsByClassName("controller-button");
   var button = document.getElementById(buttonId);
 
-
   useEffect(() => {
     if (button) {
-
       const downHandler = ({ key }) => event(true);
       const upHandler = ({ key }) => event(false);
       button.addEventListener('touchstart', downHandler);
