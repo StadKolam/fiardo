@@ -24,7 +24,6 @@ export default function HomePageScene() {
         <>
 
 
-            <MovingSpot position={[0, 30, 0]} />
 
             <Physics
                 broadphase="SAP"
@@ -59,7 +58,6 @@ export default function HomePageScene() {
                 )}
 
 
-                <Screen url={videoFileName} />
 
                 <HighLightedLetters />
                 <MovingBar position={[3, 0.5, 4.1]} />
@@ -92,7 +90,9 @@ export default function HomePageScene() {
                 />
             </Physics>
             <Suspense fallback={<Loader />}>
+                <MovingSpot position={[0, 30, 0]} />
                 <MovieWithoutScreen />
+                <Screen url={videoFileName} />
             </Suspense>
         </>
     );

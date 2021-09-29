@@ -21,12 +21,13 @@ export default function Screen({ url, videoUpdate, ...props }) {
   });
 
   useEffect(() => {
+    video.muted = true;
     video.src = url;
     video.load();
     video.play();
   }, [url, video]);
 
-  useEffect(() => void (video.play()), [video]);
+  // useEffect(() => void (video.play()), [video]);
 
   return (
     <group
