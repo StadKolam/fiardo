@@ -45,10 +45,10 @@ const App = ({ location }) => {
             <Route exact path='/record' render={() => <RecordPage instructionText={'record-page'} pageType={'record-page'} />} />
             <Route exact path="/sign-in-sign-up" component={SignInAndSignUpPage} />
             <Route exact path='/about-page' render={() => <AboutPage />} />
-            <Route exact path="/f-page" render={() => <ComingSoonPage instructionText={'majooom'} />} />
-            <Route exact path="/i-page" component={ComingSoonPage} />
-            <Route exact path="/o-page" component={ComingSoonPage} />
-            <Route exact path="/d-page" component={ComingSoonPage} />
+            <Route exact path="/f-page" render={() => <ComingSoonPage />} />
+            <Route exact path="/i-page" render={() => <ComingSoonPage />} />
+            <Route exact path="/o-page" render={() => <ComingSoonPage />} />
+            <Route exact path="/d-page" render={() => <ComingSoonPage />} />
           </Suspense>
         </HomeIcon >
       </Switch>

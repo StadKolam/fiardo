@@ -12,15 +12,7 @@ const AboutPage = () => {
             <div className="about-page-boxes">
 
                 <div className="wrapper">
-
                     <div className="box-elememt">
-
-                        {/* <AboutMenuItem id="about-site" title="about site" imageUrl="homepage-pic.png" /> */}
-                        {/* <AboutPageInfo /> */}
-
-
-                        {/* <AboutMenuItem id="about-author" key='1' title="about author" imageUrl="coming-soon.png" /> */}
-                        {/* <AboutMenuItem title="about site" imageUrl="homepage-pic.png" /> */}
                         <AboutPageInfo />
                     </div>
 

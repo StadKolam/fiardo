@@ -3,7 +3,8 @@ import MountainScene from '../../components/3D-components/mountain-scene/mountai
 import Loader from '../../components/3D-components/loader/loader.component';
 import ComingSoonBalloon from '../../components/3D-components/coming-soon-balloon/coming-soon-balloon.component';
 
-export default function ComingSoonScene() {
+export default function ComingSoonScene(props) {
+
     return (
         <Suspense fallback={<Loader />}>
             <MountainScene />

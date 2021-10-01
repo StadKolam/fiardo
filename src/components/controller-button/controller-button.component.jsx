@@ -5,16 +5,14 @@ import './controller-button.styles.scss'
 
 const ControllerButton = ({ id, direction, buttonText, directionRef, ...otherProps }) => {
     const [buttonColor, setColor] = useState('white')
-    // const onMouseDown = (e) => {
-
-    //     e.stopPropagation()
-    //     setColor('yellow')
-    // }
-    // const onMouseUp = (e) => {
-
-    //     e.stopPropagation()
-    //     setColor('white')
-    // }
+    const onTouchStart = (e) => {
+        e.stopPropagation()
+        setColor('yellow')
+    }
+    const onTouchEnd = (e) => {
+        e.stopPropagation()
+        setColor('white')
+    }
 
     return (
 
@@ -24,7 +22,7 @@ const ControllerButton = ({ id, direction, buttonText, directionRef, ...otherPro
         >
             {!buttonText ? (
 
-                <HiArrowCircleUp className={`${direction}`} size={50} color={buttonColor} style={{ transform: [{ rotateX: '180deg' }] }} />
+                <HiArrowCircleUp onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} className={`${direction}`} size={50} color={buttonColor} style={{ transform: [{ rotateX: '180deg' }] }} />
             ) :
                 <div>{buttonText}</div>
             }

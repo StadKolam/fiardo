@@ -47,7 +47,7 @@ export default function HomePageScene() {
 
                 {user ? (
                     <SignFunctions
-                        fileName={'SIGN\n   OUT'}
+                        fileName={'SIGN\n  OUT'}
                         signOut={true}
                     />
                 ) : (

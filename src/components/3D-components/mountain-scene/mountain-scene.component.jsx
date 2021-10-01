@@ -3,24 +3,24 @@ import { useGLTF } from '@react-three/drei'
 import { useFrame, useThree } from '@react-three/fiber';
 
 export default function MountainScene(props) {
-  const group = useRef()
-  const cloud1 = useRef()
-  const cloud2 = useRef()
-  const cloud3 = useRef()
 
+  const group = useRef()
+  // const cloud2 = useRef()
+  // const cloud3 = useRef()
+
+  // useFrame(({ clock }) => {
+  //   const t = clock.getElapsedTime();
+  //   const z = Math.cos(1 * t) * 0.1;
+
+  // })
   useFrame(({ clock }) => {
-    const t = clock.getElapsedTime();
-    const z = Math.cos(1 * t) * 0.1;
-    cloud1.current.position.y = z + 3;
-    cloud2.current.position.y = z + 3;
-    cloud3.current.position.y = z + 3;
+    console.log("I am executed")
+
   })
 
   const { nodes, materials } = useGLTF('/mountain-scene_draco.glb')
   return (
-    <group ref={group} {...props} dispose={null}
-    // scale={viewport.aspect > 0.6 ? 1 : (viewport.aspect)}
-    >
+    <group ref={group} {...props} dispose={null}>
       <mesh castShadow
         receiveShadow geometry={nodes.asphalt.geometry} material={nodes.asphalt.material}>
         <mesh castShadow
@@ -42,7 +42,6 @@ export default function MountainScene(props) {
       </group>
       <mesh castShadow
         receiveShadow
-        ref={cloud1}
         geometry={nodes.cloud.geometry}
         material={nodes.cloud.material}
         position={[0.4, 2.49, -0.89]}
@@ -51,7 +50,7 @@ export default function MountainScene(props) {
       />
       <mesh castShadow
         receiveShadow
-        ref={cloud2}
+        // ref={cloud2}
         geometry={nodes.cloud001.geometry}
         material={nodes.cloud001.material}
         position={[-2.84, 2.6, 1.12]}
@@ -60,7 +59,7 @@ export default function MountainScene(props) {
       />
       <mesh castShadow
         receiveShadow
-        ref={cloud3}
+        // ref={cloud3}
         geometry={nodes.cloud002.geometry}
         material={nodes.cloud002.material}
         position={[-0.93, 3.06, -4.09]}
