@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, lazy } from 'react';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
 import HomeIcon from './components/home-icon/home-icon.component';
 import Controller from './components/controller/controller.component';
@@ -7,6 +7,7 @@ import useHomeStore from './zustand/home-page-store';
 
 import HomePage from './pages/home-page/home-page.component';
 import Spinner from './components/spinner/spinner.component';
+import ProtectedRoute from './components/protected-route/protected-route.component';
 // import RecordPage from './pages/record-page/record-page.component';
 const RecordPage = lazy(() => import('./pages/record-page/record-page.component'));
 // import ComingSoonPage from './pages/coming-soon-page/coming-soon-page.component';
@@ -42,7 +43,17 @@ const App = ({ location }) => {
         <Route exact path='/' render={() => <HomePage pageType={'home-page'} />} />
         <HomeIcon>
           <Suspense fallback={<Spinner />}>
-            <Route exact path='/record' render={() => <RecordPage instructionText={'record-page'} pageType={'record-page'} />} />
+            <Route
+              exact
+              path='/record'
+              render={() =>
+                user ? (
+                  <RecordPage instructionText={'record-page'} pageType={'record-page'} />
+                ) : (
+                  <Redirect to='/sign-in-sign-up' />
+                )
+              }
+            />
             <Route exact path="/sign-in-sign-up" component={SignInAndSignUpPage} />
             <Route exact path='/about-page' render={() => <AboutPage />} />
             <Route exact path="/f-page" render={() => <ComingSoonPage />} />
