@@ -58,22 +58,6 @@ export default function FixVehicle(props) {
           geometry={nodes.Cube001_6.geometry}
           material={materials['vehicle-wheel']}
         />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Text.geometry}
-          material={materials['vehicle-plate-text']}
-          position={[-0.24, -0.5, 2.21]}
-          rotation={[Math.PI / 2, 0, 0]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Text001.geometry}
-          material={materials['vehicle-rear-plate-text']}
-          position={[0.25, -0.5, -2.25]}
-          rotation={[Math.PI / 2, 0, Math.PI]}
-        />
       </group>
     </group>
   );

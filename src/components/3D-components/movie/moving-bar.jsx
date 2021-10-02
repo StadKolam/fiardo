@@ -2,7 +2,7 @@ import { useGLTF } from '@react-three/drei'
 import { useBox } from '@react-three/cannon';
 
 export default function MovingBar(props) {
-  const { nodes, materials } = useGLTF('/moving-bar.glb')
+  const { nodes, materials } = useGLTF('/moving-bar_draco.glb')
 
   const [ref] = useBox(() => ({
     mass: 5,

@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei';
 
 export default function MovieWithoutScreen(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF('/home-page_lighter3_draco.glb');
+  const { nodes, materials } = useGLTF('/home_page_lighter_draco.glb');
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh castShadow recieveShadow geometry={nodes.asphalt.geometry} material={materials.asphalt}>
