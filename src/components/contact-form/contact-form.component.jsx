@@ -8,16 +8,12 @@ export default function ContactForm() {
         window.open('https://www.linkedin.com/in/adam-szecsi-tisza', '_blank');
     }
     function onGitHubClick() {
-        console.log('github')
+        window.open('https://github.com/StadKolam', '_blank');
     }
 
-
     return (<div className='contact-form'>
-
-
-
-        <FaLinkedin className='contact-logo' size={40} onClick={onLinkedinClick} />
-        <FaGithub className='contact-logo' size={40} onClick={onGitHubClick} />
+        <FaLinkedin className='fa-logo linkedin' size={40} onClick={onLinkedinClick} />
+        <FaGithub className='fa-logo github' size={40} onClick={onGitHubClick} />
         <EmailComponent />
     </div>)
 }

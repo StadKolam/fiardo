@@ -22,13 +22,13 @@ const Controller = (props) => {
                 <div className='controller-low-part'>
                     <div className='controller-left'>
                         <ControllerButton id="forward-controller-button" />
-                        <ControllerButton id="break-controller-button" buttonText={"brake"} />
+                        <div className='controller-right'>
+                            <ControllerButton id="right-controller-button" direction="right" />
+                            <ControllerButton id="left-controller-button" direction="left" />
+                        </div>
                         <ControllerButton id="down-controller-button" direction="down" />
                     </div>
-                    <div className='controller-right'>
-                        <ControllerButton id="right-controller-button" direction="right" />
-                        <ControllerButton id="left-controller-button" direction="left" />
-                    </div>
+                    {/* <ControllerButton id="break-controller-button" buttonText={"brake"} /> */}
                 </div>
             </Responsive>
         </>

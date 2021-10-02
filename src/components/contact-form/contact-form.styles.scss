@@ -23,6 +23,18 @@ $breakpoint-tablet: 768px;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
+    &:hover {
+        background-color:#23a6d5;
+        color: black;
+        
+      }
+}
+.fa-logo{
+    &:hover {
+        cursor:pointer;
+        color:white;
+        
+      }
 }
 
 @media (max-width: $breakpoint-tablet) {

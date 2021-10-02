@@ -10,7 +10,8 @@ const ComingSoonPage = WithThree(() => {
     useFrame((state) => {
 
         if (viewport.aspect) {
-            state.camera.zoom = viewport.aspect > 1 ? 45 : 40 * viewport.aspect
+            state.camera.zoom = viewport.aspect > 1 ? 45 : 42 * viewport.aspect
+            state.camera.position.y = 1
         }
         state.camera.updateProjectionMatrix()
     })

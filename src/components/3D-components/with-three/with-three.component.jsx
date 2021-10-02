@@ -54,7 +54,7 @@ const WithThree = (BaseComponent) => ({ instructionText, pageType = "coming-soon
                     receiveShadow={true}
                     rotation={[-Math.PI / 2, 0, 0]}
                     position={[0, -0.7, 0]}
-                    args={[100, 100]}
+                    args={[500, 500]}
                 >
                     <meshStandardMaterial attach="material" color="#adebf7" />
 
