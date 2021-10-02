@@ -17,6 +17,7 @@ const WithThree = (BaseComponent) => ({ instructionText, pageType = "coming-soon
                 camera={{
                     zoom: 20,
                     position: [12, 11, 12],
+                    near: -0.5
                 }}
                 frameloop="demand"
             >

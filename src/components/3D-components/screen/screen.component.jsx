@@ -14,8 +14,6 @@ export default function Screen({ url, videoUpdate, ...props }) {
     vid.src = url;
     vid.crossOrigin = 'Anonymous';
     vid.loop = true;
-    vid.muted = true;
-    vid.autoplay = true;
     vid.preload = "auto"
     return vid;
   });
@@ -24,6 +22,8 @@ export default function Screen({ url, videoUpdate, ...props }) {
     video.muted = true;
     video.src = url;
     video.load();
+    video.muted = true;
+    video.autoplay = true;
     video.play();
   }, [url, video]);
 
