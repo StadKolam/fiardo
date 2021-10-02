@@ -28,7 +28,8 @@ $breakpoint-tablet: 768px;
     &:focus {
       outline: none;
       background: none;
-      font-family: 'Bungee', cursive;
+      // font-family: 'Bungee', cursive;
+      
     }
 
     &:focus ~ .form-input-label {
@@ -38,7 +39,7 @@ $breakpoint-tablet: 768px;
 
   input[type='password'] {
     letter-spacing: 0.3em;
-    font-family: unset;
+    
   }
 
   .form-input-label {
