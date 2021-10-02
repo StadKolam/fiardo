@@ -9,7 +9,7 @@ const HomePage = WithThree(() => {
     useFrame((state) => {
         if (viewport.aspect) {
             console.log(viewport.aspe)
-            state.camera.zoom = viewport.aspect > 1 ? 45 : 50 * (1 - viewport.aspect)
+            state.camera.zoom = viewport.aspect > 1 ? 45 : 45 * (1 - viewport.aspect)
 
             // state.camera.position.x = viewport.aspect > 1 ? 12 : 9
             // state.camera.position.z = viewport.aspect > 1 ? 12 : 9
