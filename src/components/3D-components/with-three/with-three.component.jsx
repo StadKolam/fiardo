@@ -19,7 +19,7 @@ const WithThree = (BaseComponent) => ({ instructionText, pageType = "coming-soon
                     position: [12, 11, 12],
                     near: -0.5
                 }}
-                frameloop="demand"
+            // frameloop="demand"
             >
                 <rectAreaLight
                     width={10}
@@ -55,7 +55,7 @@ const WithThree = (BaseComponent) => ({ instructionText, pageType = "coming-soon
                     receiveShadow={true}
                     rotation={[-Math.PI / 2, 0, 0]}
                     position={[0, -0.7, 0]}
-                    args={[500, 500]}
+                    args={[150, 150]}
                 >
                     <meshStandardMaterial attach="material" color="#adebf7" />
 

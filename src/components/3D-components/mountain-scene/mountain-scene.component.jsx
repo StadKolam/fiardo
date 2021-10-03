@@ -42,30 +42,22 @@ export default function MountainScene(props) {
       </group>
       <mesh castShadow
         receiveShadow
-        geometry={nodes.cloud.geometry}
-        material={nodes.cloud.material}
+        geometry={nodes.cloud001.geometry}
+        material={nodes.cloud001.material}
         position={[0.4, 2.49, -0.89]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={[0.05, 0.05, 0.05]}
       />
       <mesh castShadow
         receiveShadow
-        // ref={cloud2}
-        geometry={nodes.cloud001.geometry}
-        material={nodes.cloud001.material}
+        ref={props.cloudRef}
+        geometry={nodes.cloud002.geometry}
+        material={nodes.cloud002.material}
         position={[-2.84, 2.6, 1.12]}
         rotation={[Math.PI / 2, 0, 0.91]}
         scale={[0.07, 0.07, 0.07]}
       />
-      <mesh castShadow
-        receiveShadow
-        // ref={cloud3}
-        geometry={nodes.cloud002.geometry}
-        material={nodes.cloud002.material}
-        position={[-0.93, 3.06, -4.09]}
-        rotation={[Math.PI / 2, 0, -2.55]}
-        scale={[0.08, 0.08, 0.08]}
-      />
+
     </group>
   )
 }

@@ -1,20 +1,26 @@
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 
 export default function ComingSoonBalloon(props) {
   const group = useRef()
   const { nodes, materials } = useGLTF('/coming-soon-balloon_draco.glb')
-  useFrame(({ clock }) => {
-    const t = clock.getElapsedTime();
-    const z = Math.cos(2 * t) * 0.005;
-    group.current.position.y += z;
-    group.current.rotation.y -= 0.004
+  // const { viewport } = useThree()
 
-  })
+  // useFrame((state) => {
+  //   const t = clock.getElapsedTime();
+  //   const z = Math.cos(2 * t) * 0.005;
+  //   group.current.position.y += z;
+  //   console.log(state)
+  //   group.current.rotation.y -= 0.4
+  //   if (viewport.aspect) {
+  //     state.camera.zoom = viewport.aspect > 1 ? 45 : 70 * (1 - viewport.aspect)
+  //   }
+  //   state.camera.updateProjectionMatrix()
+  // })
 
   return (
-    <group scale={[0.6, 0.6, 0.6]} ref={group} {...props} dispose={null}>
+    <group scale={[0.6, 0.6, 0.6]} ref={props.balloonRef} {...props} dispose={null}>
       <group position={[0, 3.42, 0]}>
         <mesh geometry={nodes.Sphere_1.geometry} material={materials['balloon-ver-stripe1']} />
         <mesh geometry={nodes.Sphere_2.geometry} material={materials['balloon-ver-stripe2']} />
