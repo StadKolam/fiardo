@@ -27,6 +27,12 @@
     width:50%;
 }
 .controller-right {
-    display: flex;
-    align-items:center;
+    display: table-cell;     
+  
+    vertical-align: middle;
+    .right-buttons{
+
+        display: flex;
+        align-items:center;
+    }
 }

@@ -18,8 +18,15 @@ const Controller = (props) => {
                         <ControllerButton id="down-controller-button" direction="down" />
                     </div>
                     <div className='controller-right'>
-                        <ControllerButton id="right-controller-button" direction="right" />
-                        <ControllerButton id="left-controller-button" direction="left" />
+                        <div className="select-button">
+
+                            <ControllerButton id="select-controller-button" buttonText={"select"} />
+                        </div>
+                        <div className="right-buttons">
+                            <ControllerButton id="right-controller-button" direction="right" />
+                            <ControllerButton id="left-controller-button" direction="left" />
+                        </div>
+
                     </div>
                 </div>
             </Responsive>

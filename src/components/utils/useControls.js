@@ -50,6 +50,7 @@ export function useControls() {
   useControllerKeyTouch("right-controller-button", [''], (pressed) => (keys.current.left = pressed))
   useControllerKeyTouch("left-controller-button", [''], (pressed) => (keys.current.right = pressed))
   useControllerKeyTouch("reset-controller-button", [''], (pressed) => (keys.current.reset = pressed))
+  useControllerKeyTouch("select-controller-button", [''], (pressed) => (keys.current.enter = pressed))
 
   useKeyPress(['ArrowUp', 'w'], (pressed) => (keys.current.forward = pressed));
   useKeyPress(
