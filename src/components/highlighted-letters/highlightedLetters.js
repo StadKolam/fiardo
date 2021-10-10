@@ -16,7 +16,7 @@ const highlightedLetters = [
     id: 2,
     position: [-1.3, 0.5, 2.9],
     fileName: "R",
-    videoData: '/record_page.mov',
+    videoData: '/record_page.mp4',
     linkUrl: 'record',
     signInReq: true,
   },
