@@ -6,7 +6,7 @@ import './loader.styles.css';
 export default function Loader() {
     const { progress } = useProgress()
 
-    return (<Html center>
+    return (<Html center zIndexRange={[3, 2]} >
         <div className='loader'>
             <p>
                 {Math.round(progress)} % loaded

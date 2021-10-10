@@ -9,6 +9,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
   -webkit-touch-callout:none;
     -webkit-user-select:none;
     -moz-user-select:none;
@@ -33,13 +34,16 @@ body {
   background-size: auto;
 }
 #footer {
+  position:absolute;
+  width:100%;
+  bottom:0px;
   display:flex;
   justify-content: center;
-  font-family: 'Bungee', cursive;
   color: white;
   background-color: black;
   background-attachment: fixed;
   background-size: auto;
+  z-index:9
 }
 
 *,

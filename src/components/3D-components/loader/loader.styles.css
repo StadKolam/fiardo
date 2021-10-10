@@ -1,4 +1,5 @@
 .loader {
+  
   height: 200vh;
   width: 200vw;
   margin: 0;
@@ -7,4 +8,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }

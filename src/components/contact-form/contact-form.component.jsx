@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { FaLinkedin, FaGithub, FaAt } from 'react-icons/fa';
+import React from 'react';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import EmailComponent from '../email-component/email.component';
 import './contact-form.styles.scss';
 

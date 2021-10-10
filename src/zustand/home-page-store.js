@@ -8,6 +8,8 @@ const useHomeStore = create((set, get) => ({
   lightPozX: 0,
   lightPozY: 0,
   int: 0,
+  clicked: false,
+  setClicked: () => set((state) => state.clicked = true),
   setLink: (linkUrl) => set((state) => (state.link = linkUrl)),
   setVideo: (fileName) => set((state) => (state.videoFileName = fileName)),
   setUser: (username) => set(() => ({ user: username })),

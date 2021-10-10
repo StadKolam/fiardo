@@ -89,8 +89,8 @@ export default function HomePageScene() {
                     fileName={'vehicle-fix-kombi_draco.glb'}
                 />
             </Physics>
+            <MovingSpot position={[0, 30, 0]} />
             <Suspense fallback={<Loader />}>
-                <MovingSpot position={[0, 30, 0]} />
                 <MovieWithoutScreen />
                 <Screen url={videoFileName} />
             </Suspense>

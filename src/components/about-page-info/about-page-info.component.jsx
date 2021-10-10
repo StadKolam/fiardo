@@ -1,12 +1,14 @@
 import React from 'react';
 import "./about-page-info.styles.scss";
+import SvgFigure from '../svg-figure/svg-figure.component';
 export default function AboutPageInfo() {
     return (
         <div className="container">
-            <img class="container__image" src="/author_img.jpeg" />
+            <img className="container__image" alt="image" src="/author_img.jpeg" />
             <div className="container__text">
-                <h2>Why Do Cats Like Boxes?</h2>
-                <p>"Cats like boxes because they are cryptic animals; they like to hide," Stephen Zawistowski, science adviser for the American Society for the Prevention of Cruelty to Animals, told Business Insider. "And a box gives them a place of safety and security."</p>
+                <p>Hi!</p>
+                <p>My name is Adam Szécsi-Tisza and I am the creator of Fiardo.com. If you have any questions that you would like to ask me personally, feel free to contact me.</p>
+                <SvgFigure />
             </div>
         </div>
 

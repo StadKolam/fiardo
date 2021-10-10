@@ -1,10 +1,4 @@
-import { useEffect, useRef } from 'react';
-
-export function useJoystick(event) {
-    useEffect(() => {
-        console.log(event)
-    }, [event]);
-}
+import { useRef } from 'react';
 
 export function useControls() {
     const keys = useRef({

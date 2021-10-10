@@ -1,17 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import ControllerButton from '../controller-button/controller-button.component';
 import { Responsive } from '../responsive/responsive.component';
-import { useControls } from '../utils/useControls'
 import './controller.styles.scss'
 
 const Controller = (props) => {
-
-    const controls = useControls()
-
-    useEffect(() => {
-        console.log(controls)
-    })
-
     return (
         <>
             <Responsive displayIn={["Mobile", "Tablet"]}>

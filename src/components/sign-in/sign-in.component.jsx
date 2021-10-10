@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FormInput from '../form-input/form-input.components';
 import CustomButton from '../custom-button/custom-button.component';
 import { Auth } from 'aws-amplify';
@@ -11,6 +11,14 @@ const SignIn = () => {
   const [password, setPassword] = useState('');
   const { setUser, noReqSignIn } = useHomeStore()
   const [inProgress, setLoading] = useState(false)
+
+  useEffect(() => {
+    return () => {
+      setEmail(); // This worked for me
+      setPassword()
+    };
+  }, []);
+
   const handleSubmit = async (event) => {
     setLoading(true)
     event.preventDefault();

@@ -48,8 +48,6 @@ export default function MagicBoard() {
         return () => {
             Tone.Transport.stop()
             setPlaying(false)
-            console.log(initialSteps)
-
         }
     }, [setPlaying])
 
@@ -58,7 +56,6 @@ export default function MagicBoard() {
         Tone.Transport.scheduleRepeat(function (time) {
             tracks.forEach((track, index) => {
                 let step = track.steps[stepIndex.current];
-                // setCurrentColumn(step);
                 setCurrentColumn(stepIndex.current)
 
                 if (step === 1) {
@@ -84,14 +81,12 @@ export default function MagicBoard() {
             newTracks[trackIndex].steps[stepIndex] =
                 newTracks[trackIndex].steps[stepIndex] === 0 ? 1 : 0;
             setTracks(newTracks);
-            console.log(tracks)
         },
         [tracks, setTracks]
     );
 
     return (
         <React.Fragment>
-
             {tracks.map((track, index) => {
                 return (
                     <div
@@ -106,7 +101,6 @@ export default function MagicBoard() {
                     </div>
                 );
             })}
-
         </React.Fragment>
     );
 }

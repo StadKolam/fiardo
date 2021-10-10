@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useBox } from '@react-three/cannon';
-import { useGLTF, Text } from '@react-three/drei';
+import { Text } from '@react-three/drei';
 
 import useHomeStore from '../../../zustand/home-page-store';
 
@@ -33,10 +33,10 @@ export default function HighLightedLetter({ fileName, linkUrl, ...props }) {
   const onCollide = (e) => {
     setVideo(videoData)
     setLink(linkUrl)
-    console.log("valami")
   };
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.stopPropagation()
     if (signInReq && !user) {
       reqSignIn();
       return null;

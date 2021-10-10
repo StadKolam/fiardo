@@ -3,22 +3,29 @@
     bottom: 50px;
     left: 50px;
     padding: 15px;
+    width:25%;
     border-style: solid ;
-    border-radius: 5px;
+    border-radius: 0.45em;
     border-color: black;
     background-color: black;
     justify-content: center;
-
+    z-index:1;
+    @media (max-width: 620px) {
+        left:1%;
+        width:98%;
+        bottom:0px; 
+}
+    
     &.hidden {
         display: none;
     }
-    &.right {
-        left:auto;
-        right:50px;
+    &.center {
+        left:50%;
+        top:50%;
       }
 }
 
-pre {
+p,h3 {
     font-family: 'Bungee', cursive;
     color:white;
     font-size: 14px;

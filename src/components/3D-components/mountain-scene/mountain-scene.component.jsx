@@ -1,24 +1,11 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
-import { useFrame, useThree } from '@react-three/fiber';
 
 export default function MountainScene(props) {
 
   const group = useRef()
-  // const cloud2 = useRef()
-  // const cloud3 = useRef()
 
-  // useFrame(({ clock }) => {
-  //   const t = clock.getElapsedTime();
-  //   const z = Math.cos(1 * t) * 0.1;
-
-  // })
-  useFrame(({ clock }) => {
-    console.log("I am executed")
-
-  })
-
-  const { nodes, materials } = useGLTF('/mountain-scene_draco.glb')
+  const { nodes, materials } = useGLTF('/mountain-scene_draco2.glb')
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh castShadow

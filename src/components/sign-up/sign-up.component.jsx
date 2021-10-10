@@ -37,10 +37,8 @@ const SignUp = () => {
     setLoading(true);
 
     try {
-      //await auth.signInWithEmailAndPassword(email, password);
-      //await Auth.signUp(email, password);
+
       await Auth.confirmSignUp(email, verCode);
-      console.log(email, verCode);
       setEmail('');
       setVerCode('');
       setVerify(false);

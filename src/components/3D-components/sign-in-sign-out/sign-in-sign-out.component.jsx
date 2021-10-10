@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useGLTF, Text } from '@react-three/drei';
+import { Text } from '@react-three/drei';
 import { useBox } from '@react-three/cannon';
 import useHomeStore from '../../../zustand/home-page-store';
 import { Auth } from 'aws-amplify';

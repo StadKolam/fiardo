@@ -2,11 +2,10 @@ import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useRaycastVehicle } from '@react-three/cannon';
 import { useControls } from '../../utils/useControls';
-import { keys } from '../../controller/controller.component'
+
 import VehicleBody from './vehicle-body';
 import Wheel from './wheel';
 import useHomeStore from '../../../zustand/home-page-store';
-import useControlStore from '../../../zustand/control-store';
 
 function Vehicle({
   radius = 0.1,
@@ -20,15 +19,12 @@ function Vehicle({
   ...props
 }) {
   const { link, user, reqSignIn } = useHomeStore();
-  // const { keys } = useControlStore()
   const chassis = useRef();
   const wheel1 = useRef();
   const wheel2 = useRef();
   const wheel3 = useRef();
   const wheel4 = useRef();
-  //ide kell egy if whether mobile or desktop
   const controls = useControls();
-  //const controls = useJoyStick();
 
   const wheelInfo = {
     radius,
@@ -78,7 +74,6 @@ function Vehicle({
 
   useFrame(() => {
     const { forward, backward, left, right, brake, reset, enter } = controls.current;
-    // const { forward, backward, left, right, brake, reset, enter } = keys;
 
     for (let e = 2; e < 4; e++)
       api.applyEngineForce(
@@ -98,11 +93,12 @@ function Vehicle({
       chassis.current.api.rotation.set(0, 0, 0);
     }
     if (enter && link) {
-      if (user) {
-        window.appHistory.push(link)
-      } else {
-        reqSignIn()
+      if (!user) {
+        reqSignIn();
+        return null;
       }
+      console.log("futok")
+      window.appHistory.push(link);
     }
   });
 

@@ -2,10 +2,11 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Plane } from '@react-three/drei'
 import Instructions from '../../instructions/instructions.component';
+import MainIntro from '../../main-intro/main-intro.component';
 import threeAttrs from './threeAttrs';
 
 
-const WithThree = (BaseComponent) => ({ instructionText, pageType = "coming-soon-page", ...props }) => {
+const WithThree = (BaseComponent) => ({ instructionText, mainIntro, pageType = "coming-soon-page", ...props }) => {
     const attrs = threeAttrs[pageType]
 
     return (
@@ -62,9 +63,12 @@ const WithThree = (BaseComponent) => ({ instructionText, pageType = "coming-soon
                 </Plane>
 
                 <BaseComponent />
+                {/* <Loader style={{ position: "relative", zIndex: 0 }} />
+                <Loader style={{ position: "relative", zIndex: 0 }} /> */}
+
             </Canvas>
             {instructionText ? <Instructions instText={instructionText} /> : null}
-
+            {mainIntro ? <MainIntro /> : null}
         </>
     )
 }

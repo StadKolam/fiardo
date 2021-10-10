@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 
 export function useKeyPress(target, event) {
   useEffect(() => {
-    const downHandler = ({ key }) => { console.log(key); target.indexOf(key) !== -1 && event(true) };
+    const downHandler = ({ key }) => { target.indexOf(key) !== -1 && event(true) };
     const upHandler = ({ key }) => target.indexOf(key) !== -1 && event(false);
     window.addEventListener('keydown', downHandler);
     window.addEventListener('keyup', upHandler);
@@ -28,7 +28,7 @@ export function useControllerKeyTouch(buttonId, target, event) {
         button.removeEventListener('touchend', upHandler);
       };
     }
-  }, [event, target]);
+  }, [event, target, button]);
 
 }
 

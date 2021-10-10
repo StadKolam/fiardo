@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { HiArrowCircleUp } from 'react-icons/hi'
-import { FaRedo } from 'react-icons/fa'
 import './controller-button.styles.scss'
 
 const ControllerButton = ({ id, direction, buttonText, directionRef, ...otherProps }) => {

@@ -7,16 +7,14 @@ import useHomeStore from './zustand/home-page-store';
 
 import HomePage from './pages/home-page/home-page.component';
 import Spinner from './components/spinner/spinner.component';
-import ProtectedRoute from './components/protected-route/protected-route.component';
-// import RecordPage from './pages/record-page/record-page.component';
+
 const RecordPage = lazy(() => import('./pages/record-page/record-page.component'));
-// import ComingSoonPage from './pages/coming-soon-page/coming-soon-page.component';
+
 const ComingSoonPage = lazy(() => import('./pages/coming-soon-page/coming-soon-page.component'));
 
-// import SignInAndSignUpPage from './pages/sign-in-and-sign-up-page_copy/sign-in-and-sign-up-component';
 const SignInAndSignUpPage = lazy(() => import('./pages/sign-in-and-sign-up-page/sign-in-and-sign-up.component'));
-const AboutPage = lazy(() => import('./pages/about-page/about-page.component'));
 
+const AboutPage = lazy(() => import('./pages/about-page/about-page.component'));
 const App = ({ location }) => {
   const { user, setUser } = useHomeStore();
   useEffect(() => {
@@ -40,7 +38,7 @@ const App = ({ location }) => {
     <>
       <Switch>
 
-        <Route exact path='/' render={() => <HomePage pageType={'home-page'} />} />
+        <Route exact path='/' render={() => <HomePage pageType={'home-page'} instructionText={'home-page'} mainIntro={true} />} />
         <HomeIcon>
           <Suspense fallback={<Spinner />}>
             <Route
@@ -63,7 +61,7 @@ const App = ({ location }) => {
           </Suspense>
         </HomeIcon >
       </Switch>
-      {location.pathname == '/' && <Controller />}
+      {location.pathname === '/' && <Controller />}
 
 
     </>

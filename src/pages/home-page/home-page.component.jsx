@@ -4,7 +4,6 @@ import WithThree from '../../components/3D-components/with-three/with-three.comp
 import { useThree, useFrame } from '@react-three/fiber';
 
 const HomePage = WithThree(() => {
-
     const { viewport } = useThree()
     useFrame((state) => {
         if (viewport.aspect) {
@@ -12,7 +11,9 @@ const HomePage = WithThree(() => {
         }
         state.camera.updateProjectionMatrix()
     })
-    return (<HomePageScene />)
+    return (
+        <HomePageScene />
+    )
 
 })
 export default HomePage;

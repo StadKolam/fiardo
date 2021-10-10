@@ -18,7 +18,7 @@ export default function EmailComponent() {
 
 
 
-        {copied ? <div className="copied-flag">{"copied"}</div> : <FaAt className='contact-logo' size={40} onClick={onAtClick} />}
+        {copied ? <div className="copied-flag">{"copied"}</div> : <FaAt className='fa-logo e-mail' size={40} onClick={onAtClick} />}
 
     </>)
 }
