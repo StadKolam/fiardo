@@ -5,7 +5,7 @@ export default function MovingBar(props) {
   const { nodes, materials } = useGLTF('/moving-bar_draco.glb')
 
   const [ref] = useBox(() => ({
-    mass: 5,
+    mass: 0.1,
     type: 'Dynamic',
     args: [0.1, 0.4, 1],
     ...props,

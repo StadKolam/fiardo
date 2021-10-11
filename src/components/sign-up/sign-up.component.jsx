@@ -26,6 +26,7 @@ const SignUp = () => {
       setPassword('');
       setPasswordConfirm('');
       setVerify(true);
+      alert("A verification code has been sent to your email account")
     } catch (e) {
       alert(e.message);
     }
@@ -45,6 +46,7 @@ const SignUp = () => {
     } catch (e) {
       alert(e.message);
     }
+    alert("Your account has been activated successfully. You can now login.")
     setLoading(false)
   };
 
