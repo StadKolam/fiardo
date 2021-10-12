@@ -1,9 +1,9 @@
 # Fiardo.com
 
 This project is live on (https://www.fiardo.com).
-This is a single page application developed by Adam Szécsi-Tisza.
-                    On the homepage you will find a 3D drive-in movie screen where you can drive the blue car to a parking spot and view the trailer videos by driving through the letters or by simply clicking on them to jump to the subpage.
-                   
+Fiardo is a single page application developed by me.
+On the homepage you will find a 3D drive-in movie screen where you can drive the blue car to a parking spot and view the trailer videos by driving through the letters or by simply clicking on them to jump to the subpage.
+               
                     You have the following options:
 
               
