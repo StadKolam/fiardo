@@ -6,7 +6,7 @@ import { EffectComposer, SelectiveBloom } from '@react-three/postprocessing'
 
 export default function NeonAd(props) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/neon-ad_draco.glb')
+  const { nodes, materials } = useGLTF('/neon-ad_draco.glb', "https://www.gstatic.com/draco/versioned/decoders/1.4.0/")
   const clapRef = useRef()
   const hatRef = useRef()
   const synthRef = useRef()

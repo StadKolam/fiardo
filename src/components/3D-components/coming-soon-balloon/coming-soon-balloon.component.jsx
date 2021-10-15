@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function ComingSoonBalloon(props) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/coming-soon-balloon_draco.glb')
+  const { nodes, materials } = useGLTF('/coming-soon-balloon_draco.glb', "https://www.gstatic.com/draco/versioned/decoders/1.4.0/")
 
   return (
     <group scale={[0.6, 0.6, 0.6]} ref={props.balloonRef} {...props} dispose={null}>

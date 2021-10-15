@@ -4,7 +4,7 @@ import { useBox } from '@react-three/cannon';
 
 const VehicleBody = forwardRef(
   ({ args = [0.5, 0.5, 1.3], mass = 500, ...props }, ref) => {
-    const { nodes, materials } = useGLTF('/vehicle-body_draco.glb');
+    const { nodes, materials } = useGLTF('/vehicle-body_draco.glb', "https://www.gstatic.com/draco/versioned/decoders/1.4.0/");
     const [, api] = useBox(
       () => ({
         mass,

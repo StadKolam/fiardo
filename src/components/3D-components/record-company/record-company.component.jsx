@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function RecordCompany(props) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/record-company_draco.glb')
+  const { nodes, materials } = useGLTF('/record-company_draco.glb', "https://www.gstatic.com/draco/versioned/decoders/1.4.0/")
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh castShadow

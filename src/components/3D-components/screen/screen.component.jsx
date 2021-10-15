@@ -6,7 +6,7 @@ export default function Screen({ url, videoUpdate, ...props }) {
   const group = useRef();
   const [movie, setMovie] = useState(true);
 
-  const { nodes, materials } = useGLTF('/screen_draco.glb');
+  const { nodes, materials } = useGLTF('/screen_draco.glb', "https://www.gstatic.com/draco/versioned/decoders/1.4.0/");
 
 
   const [video] = useState(() => {

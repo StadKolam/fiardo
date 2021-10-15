@@ -5,7 +5,7 @@ import useRecordPlayerStore from '../../../zustand/record-page-store';
 export default function PlayPauseButton(props) {
   const group = useRef()
   const playPauseButton = useRef()
-  const { nodes, materials } = useGLTF('/play-pause-button_draco.glb')
+  const { nodes, materials } = useGLTF('/play-pause-button_draco.glb', "https://www.gstatic.com/draco/versioned/decoders/1.4.0/")
   const { playing, setPlaying } = useRecordPlayerStore();
 
   const [hovered, setHovered] = useState();

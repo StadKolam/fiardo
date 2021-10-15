@@ -46,6 +46,7 @@ export default function HomePageScene() {
 
 
                 {user ? (
+
                     <SignFunctions
                         fileName={'SIGN\n  OUT'}
                         signOut={true}
@@ -89,7 +90,9 @@ export default function HomePageScene() {
                     fileName={'vehicle-fix-kombi_draco.glb'}
                 />
             </Physics>
+
             <MovingSpot position={[0, 30, 0]} />
+
             <Suspense fallback={<Loader />}>
                 <MovieWithoutScreen />
                 <Screen url={videoFileName} />

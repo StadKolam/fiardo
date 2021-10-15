@@ -11,7 +11,7 @@ export default function FixVehicle(props) {
     ...props,
   }));
 
-  const { nodes, materials } = useGLTF(fileName);
+  const { nodes, materials } = useGLTF(fileName, "https://www.gstatic.com/draco/versioned/decoders/1.4.0/");
 
   return (
     <group ref={ref} {...props} dispose={null}>

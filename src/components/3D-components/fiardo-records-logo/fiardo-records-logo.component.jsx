@@ -4,7 +4,7 @@ import { useGLTF } from '@react-three/drei'
 export default function FiardoRecordsLogo(props) {
     const group = useRef()
     const logo = useRef()
-    const { nodes, materials } = useGLTF('/fiardo-records_draco.glb')
+    const { nodes, materials } = useGLTF('/fiardo-records_draco.glb', "https://www.gstatic.com/draco/versioned/decoders/1.4.0/")
     return (
         <>
             <group ref={group} {...props} dispose={null}>

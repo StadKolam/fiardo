@@ -5,7 +5,7 @@ export default function MountainScene(props) {
 
   const group = useRef()
 
-  const { nodes, materials } = useGLTF('/mountain-scene_draco2.glb')
+  const { nodes, materials } = useGLTF('/mountain-scene_draco2.glb', "https://www.gstatic.com/draco/versioned/decoders/1.4.0/")
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh castShadow
